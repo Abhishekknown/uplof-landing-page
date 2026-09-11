@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+html { background: #0A0C0B; }
+body { margin: 0; font-family: "Geist", "Inter", system-ui, sans-serif; color: #F2F1EA; background: #0A0C0B; -webkit-font-smoothing: antialiased; }
+a { color: #35D07A; text-decoration: none; }
+a:hover { color: #5FE3A1; }
+input, textarea, button { font-family: inherit; }
+input::placeholder, textarea::placeholder { color: #6E7570; }
+input:focus, textarea:focus { outline: none; border-color: #F2F1EA; }
+@keyframes uFlow { from { transform: translateX(-18px) } to { transform: translateX(48px) } }
+@keyframes uBreathe { 0%,100% { opacity:.35 } 50% { opacity:.85 } }
+@keyframes uCur { 0%,17% { transform: translate(64px,150px) } 25%,42% { transform: translate(716px,44px) } 50%,67% { transform: translate(118px,332px) } 75%,92% { transform: translate(70px,436px) } 100% { transform: translate(64px,150px) } }
+@keyframes uThink { 0% { opacity:0; transform: translateY(8px) } 4% { opacity:1; transform: translateY(0) } 17% { opacity:1; transform: translateY(0) } 22% { opacity:0; transform: translateY(-6px) } 100% { opacity:0; transform: translateY(8px) } }
+</style>
+<script src="./image-slot.js"></script>
+<style>
+</style>
+</helmet>
+<div ref="{{ refRoot }}" style="position:relative;height:calc(var(--len, 1700) * 1vh);background:#0A0C0B">
+  <div ref="{{ refStage }}" style="position:sticky;top:0;height:100vh;overflow:hidden;background:#0A0C0B;--cs:0.8;--cx:0px;--cy:0px;--wtop:44%;--accent:#35D07A">
+    <div style="position:absolute;left:0;top:0;width:100%;height:100%;background:radial-gradient(56% 50% at 50% 56%, var(--tintC, #6BA5FF) 0%, rgba(10,12,11,0) 72%);opacity:var(--tint, 0);pointer-events:none"></div>
+    <div style="position:absolute;left:0;top:0;width:100%;height:100%;background:radial-gradient(118% 86% at 50% 42%, rgba(10,12,11,0) 42%, rgba(0,0,0,.62) 100%);pointer-events:none"></div>
+
+    <div style="position:absolute;left:0;top:0;width:100%;height:100%;filter:blur(calc(var(--back, 0) * 3px));opacity:calc(1 - var(--back, 0) * 0.78)">
+      <div style="position:absolute;left:50%;top:var(--wtop, 44%);width:0;height:0;transform:scale(var(--cs)) translate(var(--cx), var(--cy));will-change:transform">
+
+        <div style="position:absolute;left:-522px;top:-1px;width:44px;height:2px;background:#343B37;opacity:var(--sys, 0)"></div>
+        <div style="position:absolute;left:-522px;top:-1px;width:44px;height:2px;background:var(--accent);opacity:var(--sys, 0);transform:scaleX(var(--g1, 0));transform-origin:left center"></div>
+        <div style="position:absolute;left:-522px;top:-5px;width:44px;height:10px;overflow:hidden;opacity:calc(var(--sys, 0) * var(--g1, 0))"><div style="position:absolute;left:0;top:1px;width:16px;height:8px;border-radius:5px;background:var(--accent);filter:blur(3.5px);animation:uFlow 1.9s linear infinite"></div></div>
+        <div style="position:absolute;left:-322px;top:-1px;width:44px;height:2px;background:#343B37;opacity:var(--sys, 0)"></div>
+        <div style="position:absolute;left:-322px;top:-1px;width:44px;height:2px;background:var(--accent);opacity:var(--sys, 0);transform:scaleX(var(--g2, 0));transform-origin:left center"></div>
+        <div style="position:absolute;left:-322px;top:-5px;width:44px;height:10px;overflow:hidden;opacity:calc(var(--sys, 0) * var(--g2, 0))"><div style="position:absolute;left:0;top:1px;width:16px;height:8px;border-radius:5px;background:var(--accent);filter:blur(3.5px);animation:uFlow 1.9s linear infinite"></div></div>
+        <div style="position:absolute;left:-122px;top:-1px;width:44px;height:2px;background:#343B37;opacity:var(--sys, 0)"></div>
+        <div style="position:absolute;left:-122px;top:-1px;width:44px;height:2px;background:var(--accent);opacity:var(--sys, 0);transform:scaleX(var(--g3, 0));transform-origin:left center"></div>
+        <div style="position:absolute;left:-122px;top:-5px;width:44px;height:10px;overflow:hidden;opacity:calc(var(--sys, 0) * var(--g3, 0))"><div style="position:absolute;left:0;top:1px;width:16px;height:8px;border-radius:5px;background:var(--accent);filter:blur(3.5px);animation:uFlow 1.9s linear infinite"></div></div>
+        <div style="position:absolute;left:78px;top:-1px;width:44px;height:2px;background:#343B37;opacity:var(--sys, 0)"></div>
+        <div style="position:absolute;left:78px;top:-1px;width:44px;height:2px;background:var(--accent);opacity:var(--sys, 0);transform:scaleX(var(--g4, 0));transform-origin:left center"></div>
+        <div style="position:absolute;left:78px;top:-5px;width:44px;height:10px;overflow:hidden;opacity:calc(var(--sys, 0) * var(--g4, 0))"><div style="position:absolute;left:0;top:1px;width:16px;height:8px;border-radius:5px;background:var(--accent);filter:blur(3.5px);animation:uFlow 1.9s linear infinite"></div></div>
+        <div style="position:absolute;left:278px;top:-1px;width:44px;height:2px;background:#343B37;opacity:var(--sys, 0)"></div>
+        <div style="position:absolute;left:278px;top:-1px;width:44px;height:2px;background:var(--accent);opacity:var(--sys, 0);transform:scaleX(var(--g5, 0));transform-origin:left center"></div>
+        <div style="position:absolute;left:278px;top:-5px;width:44px;height:10px;overflow:hidden;opacity:calc(var(--sys, 0) * var(--g5, 0))"><div style="position:absolute;left:0;top:1px;width:16px;height:8px;border-radius:5px;background:var(--accent);filter:blur(3.5px);animation:uFlow 1.9s linear infinite"></div></div>
+        <div style="position:absolute;left:478px;top:-1px;width:44px;height:2px;background:#343B37;opacity:var(--sys, 0)"></div>
+        <div style="position:absolute;left:478px;top:-1px;width:44px;height:2px;background:var(--accent);opacity:var(--sys, 0);transform:scaleX(var(--g6, 0));transform-origin:left center"></div>
+        <div style="position:absolute;left:478px;top:-5px;width:44px;height:10px;overflow:hidden;opacity:calc(var(--sys, 0) * var(--g6, 0))"><div style="position:absolute;left:0;top:1px;width:16px;height:8px;border-radius:5px;background:var(--accent);filter:blur(3.5px);animation:uFlow 1.9s linear infinite"></div></div>
+
+        <div style="position:absolute;left:-600px;top:0px;transform:translate(-50%,-50%);opacity:calc(var(--sys, 0) * var(--dim1, 1))">
+          <div style="position:relative;width:148px;height:112px">
+            <div style="position:absolute;inset:0;border:1px solid #343B37;border-radius:12px;background:#171D1A;opacity:calc(1 - var(--n1, 0))"></div>
+            <div style="position:absolute;inset:0;border:1.5px solid #6BA5FF;border-radius:12px;background:#171D1A;box-shadow:0 0 0 1px #6BA5FF, 0 0 44px -10px #6BA5FF;opacity:var(--n1, 0)"></div>
+            <div style="position:absolute;inset:-8px;border:1px solid #F2F1EA;border-radius:17px;opacity:calc(var(--h1, 0) * 0.5)"></div>
+            <div style="position:absolute;inset:0;padding:12px;display:flex;flex-direction:column;justify-content:space-between">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:color-mix(in oklab, #8A918A, #6BA5FF calc(var(--n1, 0) * 100%))"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.12em;color:#979D95">01</div>
+              </div>
+              <div style="font-size:17px;font-weight:500;letter-spacing:-.01em">Google</div>
+            </div>
+          </div>
+          <div style="position:absolute;left:50%;top:126px;transform:translateX(-50%);width:200px;text-align:center;font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.07em">
+            <div style="color:#FFA778;opacity:calc(1 - var(--n1, 0))">NOT OPTIMISED</div>
+            <div style="position:absolute;left:0;top:0;width:100%;color:#6BA5FF;opacity:var(--n1, 0)">FIXED</div>
+          </div>
+        </div>
+        <div style="position:absolute;left:-400px;top:0px;transform:translate(-50%,-50%);opacity:calc(var(--sys, 0) * var(--dim2, 1))">
+          <div style="position:relative;width:148px;height:112px">
+            <div style="position:absolute;inset:0;border:1px solid #343B37;border-radius:12px;background:#171D1A;opacity:calc(1 - var(--n2, 0))"></div>
+            <div style="position:absolute;inset:0;border:1.5px solid #5FE3A1;border-radius:12px;background:#171D1A;box-shadow:0 0 0 1px #35D07A, 0 0 44px -10px #35D07A;opacity:var(--n2, 0)"></div>
+            <div style="position:absolute;inset:-8px;border:1px solid #F2F1EA;border-radius:17px;opacity:calc(var(--h2, 0) * 0.5)"></div>
+            <div style="position:absolute;inset:0;padding:12px;display:flex;flex-direction:column;justify-content:space-between">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:color-mix(in oklab, #8A918A, #5FE3A1 calc(var(--n2, 0) * 100%))"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/><path d="M6 6.5h.01"/></svg>
+                <div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.12em;color:#979D95">02</div>
+              </div>
+              <div style="font-size:17px;font-weight:500;letter-spacing:-.01em">Website</div>
+            </div>
+          </div>
+          <div style="position:absolute;left:50%;top:126px;transform:translateX(-50%);width:200px;text-align:center;font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.07em">
+            <div style="color:#FFA778;opacity:calc(1 - var(--n2, 0))">UNCLEAR</div>
+            <div style="position:absolute;left:0;top:0;width:100%;color:#5FE3A1;opacity:var(--n2, 0)">FIXED</div>
+          </div>
+        </div>
+        <div style="position:absolute;left:-200px;top:0px;transform:translate(-50%,-50%);opacity:calc(var(--sys, 0) * var(--dim3, 1))">
+          <div style="position:relative;width:148px;height:112px">
+            <div style="position:absolute;inset:0;border:1px solid #343B37;border-radius:12px;background:#171D1A;opacity:calc(1 - var(--n3, 0))"></div>
+            <div style="position:absolute;inset:0;border:1.5px solid #F5BE4A;border-radius:12px;background:#171D1A;box-shadow:0 0 0 1px #F5BE4A, 0 0 44px -10px #F5BE4A;opacity:var(--n3, 0)"></div>
+            <div style="position:absolute;inset:-8px;border:1px solid #F2F1EA;border-radius:17px;opacity:calc(var(--h3, 0) * 0.5)"></div>
+            <div style="position:absolute;inset:0;padding:12px;display:flex;flex-direction:column;justify-content:space-between">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:color-mix(in oklab, #8A918A, #F5BE4A calc(var(--n3, 0) * 100%))"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.3-4.3"/></svg>
+                <div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.12em;color:#979D95">03</div>
+              </div>
+              <div style="font-size:17px;font-weight:500;letter-spacing:-.01em">Local SEO</div>
+            </div>
+          </div>
+          <div style="position:absolute;left:50%;top:126px;transform:translateX(-50%);width:200px;text-align:center;font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.07em">
+            <div style="color:#FFA778;opacity:calc(1 - var(--n3, 0))">NO STRUCTURE</div>
+            <div style="position:absolute;left:0;top:0;width:100%;color:#F5BE4A;opacity:var(--n3, 0)">FIXED</div>
+          </div>
+        </div>
+        <div style="position:absolute;left:0px;top:0px;transform:translate(-50%,-50%);opacity:calc(var(--sys, 0) * var(--dim4, 1))">
+          <div style="position:relative;width:148px;height:112px">
+            <div style="position:absolute;inset:0;border:1px solid #343B37;border-radius:12px;background:#171D1A;opacity:calc(1 - var(--n4, 0))"></div>
+            <div style="position:absolute;inset:0;border:1.5px solid #35C6AC;border-radius:12px;background:#171D1A;box-shadow:0 0 0 1px #35C6AC, 0 0 44px -10px #35C6AC;opacity:var(--n4, 0)"></div>
+            <div style="position:absolute;inset:-8px;border:1px solid #F2F1EA;border-radius:17px;opacity:calc(var(--h4, 0) * 0.5)"></div>
+            <div style="position:absolute;inset:0;padding:12px;display:flex;flex-direction:column;justify-content:space-between">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:color-mix(in oklab, #8A918A, #35C6AC calc(var(--n4, 0) * 100%))"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
+                <div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.12em;color:#979D95">04</div>
+              </div>
+              <div style="font-size:17px;font-weight:500;letter-spacing:-.01em">Capture</div>
+            </div>
+          </div>
+          <div style="position:absolute;left:50%;top:126px;transform:translateX(-50%);width:200px;text-align:center;font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.07em">
+            <div style="color:#FFA778;opacity:calc(1 - var(--n4, 0))">LEADS LOST</div>
+            <div style="position:absolute;left:0;top:0;width:100%;color:#35C6AC;opacity:var(--n4, 0)">FIXED</div>
+          </div>
+        </div>
+        <div style="position:absolute;left:200px;top:0px;transform:translate(-50%,-50%);opacity:calc(var(--sys, 0) * var(--dim5, 1))">
+          <div style="position:relative;width:148px;height:112px">
+            <div style="position:absolute;inset:0;border:1px solid #343B37;border-radius:12px;background:#171D1A;opacity:calc(1 - var(--n5, 0))"></div>
+            <div style="position:absolute;inset:0;border:1.5px solid #A78BFA;border-radius:12px;background:#171D1A;box-shadow:0 0 0 1px #A78BFA, 0 0 44px -10px #A78BFA;opacity:var(--n5, 0)"></div>
+            <div style="position:absolute;inset:-8px;border:1px solid #F2F1EA;border-radius:17px;opacity:calc(var(--h5, 0) * 0.5)"></div>
+            <div style="position:absolute;inset:0;padding:12px;display:flex;flex-direction:column;justify-content:space-between">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:color-mix(in oklab, #8A918A, #A78BFA calc(var(--n5, 0) * 100%))"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.12em;color:#979D95">05</div>
+              </div>
+              <div style="font-size:17px;font-weight:500;letter-spacing:-.01em">CRM</div>
+            </div>
+          </div>
+          <div style="position:absolute;left:50%;top:126px;transform:translateX(-50%);width:200px;text-align:center;font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.07em">
+            <div style="color:#FFA778;opacity:calc(1 - var(--n5, 0))">NO FOLLOW-UP</div>
+            <div style="position:absolute;left:0;top:0;width:100%;color:#A78BFA;opacity:var(--n5, 0)">FIXED</div>
+          </div>
+        </div>
+        <div style="position:absolute;left:400px;top:0px;transform:translate(-50%,-50%);opacity:calc(var(--sys, 0) * var(--dim6, 1))">
+          <div style="position:relative;width:148px;height:112px">
+            <div style="position:absolute;inset:0;border:1px solid #343B37;border-radius:12px;background:#171D1A;opacity:calc(1 - var(--n6, 0))"></div>
+            <div style="position:absolute;inset:0;border:1.5px solid #5B9DFF;border-radius:12px;background:#171D1A;box-shadow:0 0 0 1px #5B9DFF, 0 0 44px -10px #5B9DFF;opacity:var(--n6, 0)"></div>
+            <div style="position:absolute;inset:-8px;border:1px solid #F2F1EA;border-radius:17px;opacity:calc(var(--h6, 0) * 0.5)"></div>
+            <div style="position:absolute;inset:0;padding:12px;display:flex;flex-direction:column;justify-content:space-between">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:color-mix(in oklab, #8A918A, #5B9DFF calc(var(--n6, 0) * 100%))"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                <div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.12em;color:#979D95">06</div>
+              </div>
+              <div style="font-size:17px;font-weight:500;letter-spacing:-.01em">Tracking</div>
+            </div>
+          </div>
+          <div style="position:absolute;left:50%;top:126px;transform:translateX(-50%);width:200px;text-align:center;font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.07em">
+            <div style="color:#FFA778;opacity:calc(1 - var(--n6, 0))">NOT TRACKED</div>
+            <div style="position:absolute;left:0;top:0;width:100%;color:#5B9DFF;opacity:var(--n6, 0)">TRACKED</div>
+          </div>
+        </div>
+        <div style="position:absolute;left:600px;top:0px;transform:translate(-50%,-50%);opacity:calc(var(--sys, 0) * var(--dim7, 1))">
+          <div style="position:relative;width:148px;height:112px">
+            <div style="position:absolute;inset:0;border:1px solid #343B37;border-radius:12px;background:#171D1A;opacity:calc(1 - var(--n7, 0))"></div>
+            <div style="position:absolute;inset:0;border:1.5px solid #F3C34E;border-radius:12px;background:#171D1A;box-shadow:0 0 0 1px #F3C34E, 0 0 44px -10px #F3C34E;opacity:var(--n7, 0)"></div>
+            <div style="position:absolute;inset:-8px;border:1px solid #F2F1EA;border-radius:17px;opacity:calc(var(--h7, 0) * 0.5)"></div>
+            <div style="position:absolute;inset:0;padding:12px;display:flex;flex-direction:column;justify-content:space-between">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:color-mix(in oklab, #8A918A, #F3C34E calc(var(--n7, 0) * 100%))"><path d="m12 3 2.7 5.5 6 .9-4.35 4.25 1.03 6-5.38-2.83L6.62 19.65l1.03-6L3.3 9.4l6-.9z"/></svg>
+                <div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.12em;color:#979D95">07</div>
+              </div>
+              <div style="font-size:17px;font-weight:500;letter-spacing:-.01em">Reviews</div>
+            </div>
+          </div>
+          <div style="position:absolute;left:50%;top:126px;transform:translateX(-50%);width:200px;text-align:center;font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.07em">
+            <div style="color:#FFA778;opacity:calc(1 - var(--n7, 0))">PROOF UNUSED</div>
+            <div style="position:absolute;left:0;top:0;width:100%;color:#F3C34E;opacity:var(--n7, 0)">FIXED</div>
+          </div>
+        </div>
+
+        <div style="position:absolute;left:0px;top:190px;transform:translate(-50%,-50%);display:flex;align-items:center;gap:14px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.1em;color:#A8AEA7;white-space:nowrap;opacity:var(--res, 0)">
+          <span>MORE VISIBILITY</span><span style="color:var(--accent)">→</span><span>MORE INQUIRIES</span><span style="color:var(--accent)">→</span><span>BETTER FOLLOW-UP</span><span style="color:var(--accent)">→</span><span>MORE BOOKINGS</span><span style="color:var(--accent)">→</span><span>MORE REVIEWS</span>
+        </div>
+        <div style="position:absolute;left:0px;top:290px;transform:translate(-50%,-50%);display:flex;align-items:center;gap:12px;opacity:var(--loop, 0)">
+          <div style="padding:10px 18px;border:1px solid #343B37;border-radius:20px;background:#171D1A;font-size:14px">Measure</div>
+          <div style="width:26px;height:1px;background:#343B37"></div>
+          <div style="padding:10px 18px;border:1px solid #343B37;border-radius:20px;background:#171D1A;font-size:14px">Learn</div>
+          <div style="width:26px;height:1px;background:#343B37"></div>
+          <div style="padding:10px 18px;border:1px solid var(--accent);border-radius:20px;background:#171D1A;font-size:14px;color:var(--accent)">Improve</div>
+        </div>
+
+        <div style="position:absolute;left:-600px;top:470px;transform:translate(-50%,-50%);opacity:var(--roomGg, 0)">
+          <div style="display:flex;align-items:center;gap:44px">
+            <div style="width:310px;display:flex;flex-direction:column;gap:18px;opacity:var(--ggAnn, 0)">
+              <div style="position:relative;min-height:64px">
+                <div style="display:flex;align-items:center;gap:13px;min-height:64px;padding:14px 18px;border:1px solid #FF8A4C;border-radius:12px;background:#241811;box-shadow:0 12px 30px -26px rgba(0,0,0,.6);opacity:calc(1 - var(--gg1, 0))"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFA778" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M12.6 2.7a2 2 0 0 0-1.4-.6H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.5 8.5a2 2 0 0 0 2.8 0l7.2-7.2a2 2 0 0 0 0-2.8z"/><path d="M6.5 6.5h.01"/></svg><div style="font-size:18px;font-weight:500;color:#FFA778;line-height:1.2">Weak category</div></div>
+                <div style="position:absolute;inset:0;display:flex;align-items:center;gap:13px;padding:14px 18px;border:1px solid #35D07A;border-radius:12px;background:#0E2418;box-shadow:0 12px 30px -26px rgba(0,0,0,.6);opacity:var(--gg1, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7DE8AC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg><div style="font-size:18px;font-weight:500;color:#7DE8AC;line-height:1.2">Correct category</div></div>
+              </div>
+              <div style="position:relative;min-height:64px">
+                <div style="display:flex;align-items:center;gap:13px;min-height:64px;padding:14px 18px;border:1px solid #FF8A4C;border-radius:12px;background:#241811;box-shadow:0 12px 30px -26px rgba(0,0,0,.6);opacity:calc(1 - var(--gg2, 0))"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFA778" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3.5 6h.01"/><path d="M3.5 12h.01"/><path d="M3.5 18h.01"/></svg><div style="font-size:18px;font-weight:500;color:#FFA778;line-height:1.2">No services listed</div></div>
+                <div style="position:absolute;inset:0;display:flex;align-items:center;gap:13px;padding:14px 18px;border:1px solid #35D07A;border-radius:12px;background:#0E2418;box-shadow:0 12px 30px -26px rgba(0,0,0,.6);opacity:var(--gg2, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7DE8AC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg><div style="font-size:18px;font-weight:500;color:#7DE8AC;line-height:1.2">Services added</div></div>
+              </div>
+              <div style="position:relative;min-height:64px">
+                <div style="display:flex;align-items:center;gap:13px;min-height:64px;padding:14px 18px;border:1px solid #FF8A4C;border-radius:12px;background:#241811;box-shadow:0 12px 30px -26px rgba(0,0,0,.6);opacity:calc(1 - var(--gg3, 0))"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFA778" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="m5 18 5-5 4 4 2-2 3 3"/></svg><div style="font-size:18px;font-weight:500;color:#FFA778;line-height:1.2">Missing photos</div></div>
+                <div style="position:absolute;inset:0;display:flex;align-items:center;gap:13px;padding:14px 18px;border:1px solid #35D07A;border-radius:12px;background:#0E2418;box-shadow:0 12px 30px -26px rgba(0,0,0,.6);opacity:var(--gg3, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7DE8AC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg><div style="font-size:18px;font-weight:500;color:#7DE8AC;line-height:1.2">Photos added</div></div>
+              </div>
+              <div style="position:relative;min-height:64px">
+                <div style="display:flex;align-items:center;gap:13px;min-height:64px;padding:14px 18px;border:1px solid #FF8A4C;border-radius:12px;background:#241811;box-shadow:0 12px 30px -26px rgba(0,0,0,.6);opacity:calc(1 - var(--gg4, 0))"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFA778" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.6 2.6 0 0 1 5 1c0 1.8-2.5 2.5-2.5 2.5"/><path d="M12 17h.01"/></svg><div style="font-size:18px;font-weight:500;color:#FFA778;line-height:1.2">Questions unanswered</div></div>
+                <div style="position:absolute;inset:0;display:flex;align-items:center;gap:13px;padding:14px 18px;border:1px solid #35D07A;border-radius:12px;background:#0E2418;box-shadow:0 12px 30px -26px rgba(0,0,0,.6);opacity:var(--gg4, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7DE8AC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg><div style="font-size:18px;font-weight:500;color:#7DE8AC;line-height:1.2">Q&amp;A completed</div></div>
+              </div>
+            </div>
+            <div style="width:640px;background:#171D1A;border:1px solid #343B37;border-radius:18px;box-shadow:0 44px 90px -56px rgba(0,0,0,.5);padding:30px;display:flex;flex-direction:column;gap:20px">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start">
+                <div>
+                  <div style="font-size:22px;font-weight:500">Sharma Plumbing Works</div>
+                  <div style="position:relative;height:22px;margin-top:6px">
+                    <div style="position:absolute;inset:0;font-size:15px;color:#979D95;opacity:calc(1 - var(--gg1, 0))">Category: Contractor</div>
+                    <div style="position:absolute;inset:0;font-size:15px;opacity:var(--gg1, 0)">Plumber · Emergency plumbing service</div>
+                  </div>
+                </div>
+                <div style="width:26px;height:26px;border-radius:50%;background:var(--accent);color:#08120B;display:flex;align-items:center;justify-content:center;font-size:15px;opacity:var(--gg6, 0);flex-shrink:0">✓</div>
+              </div>
+              <div style="position:relative;height:22px">
+                <div style="position:absolute;inset:0;font-size:15px;color:#979D95;opacity:calc(1 - var(--gg5, 0))">3.9 ★ · 11 reviews</div>
+                <div style="position:absolute;inset:0;font-size:15px;opacity:var(--gg5, 0)">4.8 ★ · 214 reviews <span style="color:var(--accent)">+203</span></div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:8px;height:76px">
+                <div style="background:#2C3330;border-radius:8px"></div>
+                <div style="position:relative"><div style="position:absolute;inset:0;border:1px dashed #343B37;border-radius:8px;opacity:calc(1 - var(--gg3, 0))"></div><div style="position:absolute;inset:0;background:#2C3330;border-radius:8px;opacity:var(--gg3, 0)"></div></div>
+                <div style="position:relative"><div style="position:absolute;inset:0;border:1px dashed #343B37;border-radius:8px;opacity:calc(1 - var(--gg3, 0))"></div><div style="position:absolute;inset:0;background:#363E39;border-radius:8px;opacity:var(--gg3, 0)"></div></div>
+                <div style="position:relative"><div style="position:absolute;inset:0;border:1px dashed #343B37;border-radius:8px;opacity:calc(1 - var(--gg3, 0))"></div><div style="position:absolute;inset:0;background:#2C3330;border-radius:8px;opacity:var(--gg3, 0)"></div></div>
+              </div>
+              <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <div style="padding:7px 12px;border:1px solid #2C3330;border-radius:8px;font-size:14px;color:#979D95">General plumbing</div>
+                <div style="padding:7px 12px;border:1px solid var(--accent);border-radius:8px;font-size:14px;color:var(--accent);opacity:var(--gg2, 0)">Leak detection</div>
+                <div style="padding:7px 12px;border:1px solid var(--accent);border-radius:8px;font-size:14px;color:var(--accent);opacity:var(--gg2, 0)">Bathroom fitting</div>
+                <div style="padding:7px 12px;border:1px solid var(--accent);border-radius:8px;font-size:14px;color:var(--accent);opacity:var(--gg2, 0)">24×7 emergency</div>
+              </div>
+              <div style="position:relative;height:20px;font-size:14px">
+                <div style="position:absolute;left:0;top:0;color:#979D95">Q&amp;A</div>
+                <div style="position:absolute;right:0;top:0;color:#FFA778;opacity:calc(1 - var(--gg4, 0))">2 unanswered</div>
+                <div style="position:absolute;right:0;top:0;color:var(--accent);opacity:var(--gg4, 0)">8 answered</div>
+              </div>
+              <div style="display:flex;gap:10px">
+                <div style="flex:1;padding:12px;border-radius:10px;background:var(--accent);color:#08120B;font-size:14px;text-align:center;opacity:calc(0.3 + 0.7 * var(--gg4, 0))">Call</div>
+                <div style="flex:1;padding:12px;border-radius:10px;border:1px solid #343B37;font-size:14px;text-align:center;opacity:calc(0.3 + 0.7 * var(--gg4, 0))">Directions</div>
+                <div style="flex:1;padding:12px;border-radius:10px;border:1px solid #343B37;font-size:14px;text-align:center;opacity:calc(0.3 + 0.7 * var(--gg4, 0))">Website</div>
+              </div>
+            </div>
+            <div style="position:absolute;left:328px;bottom:-84px;display:flex;align-items:center;gap:20px;white-space:nowrap;opacity:var(--ggOut, 0)">
+              <div style="font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.1em;color:#979D95">RESULT</div>
+              <div style="display:flex;align-items:center;gap:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7DE8AC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg><div style="font-size:20px;font-weight:500;color:#7DE8AC">More discovery, more trust, more calls</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="position:absolute;left:-400px;top:470px;transform:translate(-50%,-50%);opacity:var(--roomWb, 0.45)">
+          <div style="width:1000px;height:560px;background:#171D1A;border:1px solid #343B37;border-radius:18px;box-shadow:0 40px 80px -55px rgba(0,0,0,.45);overflow:hidden;display:flex;flex-direction:column">
+            <div style="height:50px;border-bottom:1px solid #2C3330;display:flex;align-items:center;gap:10px;padding:0 20px;flex-shrink:0">
+              <div style="display:flex;gap:7px"><div style="width:11px;height:11px;border-radius:50%;background:#2C3330"></div><div style="width:11px;height:11px;border-radius:50%;background:#2C3330"></div><div style="width:11px;height:11px;border-radius:50%;background:#2C3330"></div></div>
+              <div style="margin-left:14px;height:26px;flex:1;max-width:300px;border-radius:13px;background:#232A26;display:flex;align-items:center;padding:0 12px;font-size:12px;color:#979D95;font-family:'Geist Mono',monospace">yourbusiness.in</div>
+            </div>
+            <div style="position:relative;flex:1">
+              <div style="position:absolute;inset:0;padding:34px 40px;opacity:calc(1 - var(--wbFix, 0));display:flex;flex-direction:column;gap:20px">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <div style="font-size:15px;font-weight:600;letter-spacing:.02em">SHARMA PLUMBING WORKS</div>
+                  <div style="display:flex;gap:18px;font-size:13px;color:#979D95"><span>Home</span><span>About Us</span><span>Services</span><span>Gallery</span><span>Contact</span></div>
+                </div>
+                <div style="height:1px;background:#272E2A"></div>
+                <div style="display:flex;flex-direction:column;gap:14px;margin-top:14px">
+                  <div style="font-size:30px;font-weight:400;color:#A8AEA7">Welcome to our website</div>
+                  <div style="display:flex;flex-direction:column;gap:9px;max-width:520px">
+                    <div style="height:9px;background:#272E2A;border-radius:5px"></div>
+                    <div style="height:9px;background:#272E2A;border-radius:5px"></div>
+                    <div style="height:9px;background:#272E2A;border-radius:5px;width:70%"></div>
+                  </div>
+                  <div style="margin-top:10px;width:120px;height:38px;border:1px solid #343B37;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:13px;color:#979D95">Submit</div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:11px">
+                  <div style="font-size:17px;color:#A8AEA7">Our Services</div>
+                  <div style="display:flex;gap:10px">
+                    <div style="padding:9px 13px;border:1px solid #272E2A;border-radius:6px;font-size:13px;color:#979D95">Plumbing work</div>
+                    <div style="padding:9px 13px;border:1px solid #272E2A;border-radius:6px;font-size:13px;color:#979D95">Repairs</div>
+                    <div style="padding:9px 13px;border:1px solid #272E2A;border-radius:6px;font-size:13px;color:#979D95">Other services</div>
+                  </div>
+                  <div style="display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:10px;height:62px;max-width:520px">
+                    <div style="background:#272E2A;border-radius:6px"></div><div style="background:#272E2A;border-radius:6px"></div><div style="background:#272E2A;border-radius:6px"></div><div style="background:#272E2A;border-radius:6px"></div>
+                  </div>
+                </div>
+                <div style="margin-top:auto;display:flex;gap:26px;font-size:12px;color:#6E7570"><span>Call: 0XX-XXXXXXX</span><span>Mon-Sat 10am-7pm</span><span>© 2011</span></div>
+              </div>
+              <div style="position:absolute;inset:0;padding:34px 40px;opacity:var(--wbFix, 0);display:flex;flex-direction:column;gap:18px">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <div style="font-size:16px;font-weight:600">Sharma Plumbing</div>
+                  <div style="display:flex;align-items:center;gap:12px">
+                    <div style="font-size:14px;color:#A8AEA7">Andheri · Bandra</div>
+                    <div style="padding:9px 16px;border-radius:8px;background:var(--accent);color:#08120B;font-size:14px;font-weight:500">Call now</div>
+                  </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:14px;margin-top:16px;max-width:640px">
+                  <div style="font-size:38px;line-height:1.1;font-weight:500;letter-spacing:-.02em;opacity:var(--wb1, 0)">Reliable Plumbing Services in Andheri</div>
+                  <div style="font-size:17px;color:#A8AEA7;opacity:var(--wb1, 0)">Same-day repairs. 12 years, 4,000+ jobs, licensed team.</div>
+                  <div style="display:flex;gap:12px;margin-top:6px;opacity:var(--wb2, 0);transform:translateY(calc((1 - var(--wb2, 0)) * 10px))">
+                    <div style="padding:14px 22px;border-radius:10px;background:var(--accent);color:#08120B;font-size:15px;font-weight:500">Call now</div>
+                    <div style="padding:14px 22px;border-radius:10px;border:1px solid var(--accent);color:var(--accent);font-size:15px;font-weight:500">WhatsApp</div>
+                    <div style="padding:14px 22px;border-radius:10px;border:1px solid #343B37;font-size:15px">Book online</div>
+                  </div>
+                </div>
+                <div style="margin-top:12px;display:flex;gap:12px;opacity:var(--wb3, 0)">
+                  <div style="padding:10px 14px;border:1px solid #2C3330;border-radius:8px;font-size:13px">4.8 ★ · 214 Google reviews</div>
+                  <div style="padding:10px 14px;border:1px solid #2C3330;border-radius:8px;font-size:13px">Licensed &amp; insured</div>
+                  <div style="padding:10px 14px;border:1px solid #2C3330;border-radius:8px;font-size:13px">60-min response</div>
+                </div>
+                <div style="margin-top:auto;display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:12px;opacity:var(--wb4, 0)">
+                  <div style="padding:12px 14px;background:#232A26;border-radius:10px;font-size:13px;color:#A8AEA7">“Fixed a burst pipe in 40 minutes.”</div>
+                  <div style="padding:12px 14px;background:#232A26;border-radius:10px;font-size:13px;color:#A8AEA7">“Clear price before starting.”</div>
+                  <div style="padding:12px 14px;background:#232A26;border-radius:10px;font-size:13px;color:#A8AEA7">“Same-day bathroom refit.”</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="position:absolute;left:-330px;top:70px;width:300px;display:flex;flex-direction:column;gap:18px;opacity:var(--wbAnn, 0)">
+              <div style="position:relative;min-height:64px">
+                <div style="display:flex;align-items:center;gap:13px;min-height:64px;padding:14px 18px;border:1px solid #FF8A4C;border-radius:12px;background:#241811;box-shadow:0 12px 30px -26px rgba(0,0,0,.6);opacity:calc(1 - var(--wb1, 0))"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFA778" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M4 6h16"/><path d="M4 12h10"/><path d="M4 18h13"/></svg><div style="font-size:18px;font-weight:500;color:#FFA778;line-height:1.2">Unclear message</div></div>
+                <div style="position:absolute;inset:0;display:flex;align-items:center;gap:13px;padding:14px 18px;border:1px solid #35D07A;border-radius:12px;background:#0E2418;box-shadow:0 12px 30px -26px rgba(0,0,0,.6);opacity:var(--wb1, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7DE8AC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg><div style="font-size:18px;font-weight:500;color:#7DE8AC;line-height:1.2">Clear local offer</div></div>
+              </div>
+              <div style="position:relative;min-height:64px">
+                <div style="display:flex;align-items:center;gap:13px;min-height:64px;padding:14px 18px;border:1px solid #FF8A4C;border-radius:12px;background:#241811;box-shadow:0 12px 30px -26px rgba(0,0,0,.6);opacity:calc(1 - var(--wb2, 0))"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFA778" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M4 3l6 16 2.2-6.4L19 10.5z"/></svg><div style="font-size:18px;font-weight:500;color:#FFA778;line-height:1.2">Weak call to action</div></div>
+                <div style="position:absolute;inset:0;display:flex;align-items:center;gap:13px;padding:14px 18px;border:1px solid #35D07A;border-radius:12px;background:#0E2418;box-shadow:0 12px 30px -26px rgba(0,0,0,.6);opacity:var(--wb2, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7DE8AC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg><div style="font-size:18px;font-weight:500;color:#7DE8AC;line-height:1.2">Call · WhatsApp · Book</div></div>
+              </div>
+              <div style="position:relative;min-height:64px">
+                <div style="display:flex;align-items:center;gap:13px;min-height:64px;padding:14px 18px;border:1px solid #FF8A4C;border-radius:12px;background:#241811;box-shadow:0 12px 30px -26px rgba(0,0,0,.6);opacity:calc(1 - var(--wb3, 0))"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFA778" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M20 12c0 5-3.5 7.5-7.7 8.95a1 1 0 0 1-.6 0C7.5 19.5 4 17 4 12V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/></svg><div style="font-size:18px;font-weight:500;color:#FFA778;line-height:1.2">Low trust</div></div>
+                <div style="position:absolute;inset:0;display:flex;align-items:center;gap:13px;padding:14px 18px;border:1px solid #35D07A;border-radius:12px;background:#0E2418;box-shadow:0 12px 30px -26px rgba(0,0,0,.6);opacity:var(--wb3, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7DE8AC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg><div style="font-size:18px;font-weight:500;color:#7DE8AC;line-height:1.2">Proof on the page</div></div>
+              </div>
+          </div>
+          <div style="position:absolute;left:0;top:592px;display:flex;gap:18px;font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.1em;color:#979D95;opacity:var(--wb3, 0)">
+            <span>DESIGN</span><span>DEVELOPMENT</span><span>LANDING PAGE</span><span>CONVERSION</span>
+          </div>
+          <div style="position:absolute;right:0;top:588px;font-size:20px;font-weight:500;color:var(--accent);opacity:var(--wbOut, 0)">More visitors become inquiries</div>
+          <div style="position:absolute;left:0;top:0;width:1000px;height:560px;opacity:var(--curs, 0)">
+            <div style="position:absolute;left:-286px;top:104px;width:264px;padding:15px 18px;border:1px solid #363E39;border-radius:16px;background:#1D2420;box-shadow:0 26px 64px -30px rgba(0,0,0,.95), 0 0 0 1px rgba(242,241,234,.05);opacity:0;animation:uThink 9.2s linear infinite;animation-delay:0s;animation-play-state:var(--hp, running)">
+              <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6E7570">VISITOR</div>
+              <div style="margin-top:7px;font-size:18px;font-weight:500;line-height:1.25">What do they actually do?</div>
+            </div>
+            <div style="position:absolute;left:620px;top:-108px;width:264px;padding:15px 18px;border:1px solid #363E39;border-radius:16px;background:#1D2420;box-shadow:0 26px 64px -30px rgba(0,0,0,.95), 0 0 0 1px rgba(242,241,234,.05);opacity:0;animation:uThink 9.2s linear infinite;animation-delay:-2.3s;animation-play-state:var(--hp, running)">
+              <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6E7570">VISITOR</div>
+              <div style="margin-top:7px;font-size:18px;font-weight:500;line-height:1.25">Which service do I need?</div>
+            </div>
+            <div style="position:absolute;left:236px;top:296px;width:264px;padding:15px 18px;border:1px solid #363E39;border-radius:16px;background:#1D2420;box-shadow:0 26px 64px -30px rgba(0,0,0,.95), 0 0 0 1px rgba(242,241,234,.05);opacity:0;animation:uThink 9.2s linear infinite;animation-delay:-4.6s;animation-play-state:var(--hp, running)">
+              <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6E7570">VISITOR</div>
+              <div style="margin-top:7px;font-size:18px;font-weight:500;line-height:1.25">How do I contact them?</div>
+            </div>
+            <div style="position:absolute;left:-286px;top:392px;width:264px;padding:15px 18px;border:1px solid #363E39;border-radius:16px;background:#1D2420;box-shadow:0 26px 64px -30px rgba(0,0,0,.95), 0 0 0 1px rgba(242,241,234,.05);opacity:0;animation:uThink 9.2s linear infinite;animation-delay:-6.9s;animation-play-state:var(--hp, running)">
+              <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#6E7570">VISITOR</div>
+              <div style="margin-top:7px;font-size:18px;font-weight:500;line-height:1.25">Can I trust them?</div>
+            </div>
+            <div style="position:absolute;left:0;top:0;animation:uCur 9.2s cubic-bezier(.6,0,.25,1) infinite;animation-play-state:var(--hp, running)">
+              <svg width="27" height="27" viewBox="0 0 24 24" fill="#F2F1EA" stroke="#1D2420" stroke-width="1.3" stroke-linejoin="round"><path d="M5 2.4l13.6 8.3-6.2.9-2.9 5.7z"/></svg>
+            </div>
+          </div>
+          <div style="position:absolute;left:-306px;top:56px;width:280px;display:flex;flex-direction:column;gap:16px;opacity:var(--leak, 0)">
+            <div style="position:relative">
+            <div style="position:absolute;right:-26px;top:50%;width:26px;height:1px;background:#6B3A1F"></div>
+            <div style="display:flex;align-items:flex-start;gap:13px;min-height:74px;padding:15px 17px;border:1px solid #FF8A4C;border-radius:12px;background:#241811;box-shadow:0 14px 34px -28px rgba(0,0,0,.65);opacity:var(--lk1, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFA778" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M10.3 3.9 2 18a2 2 0 0 0 1.7 3h16.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><div><div style="font-size:17px;font-weight:500;color:#FFA778;line-height:1.15">Unclear offer</div><div style="margin-top:5px;font-size:14px;color:#C79A7E;line-height:1.3">Visitors don't see what you do.</div></div></div>
+          </div>
+            <div style="position:relative">
+            <div style="position:absolute;right:-26px;top:50%;width:26px;height:1px;background:#6B3A1F"></div>
+            <div style="display:flex;align-items:flex-start;gap:13px;min-height:74px;padding:15px 17px;border:1px solid #FF8A4C;border-radius:12px;background:#241811;box-shadow:0 14px 34px -28px rgba(0,0,0,.65);opacity:var(--lk2, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFA778" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M20 12c0 5-3.5 7.5-7.7 8.95a1 1 0 0 1-.6 0C7.5 19.5 4 17 4 12V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/></svg><div><div style="font-size:17px;font-weight:500;color:#FFA778;line-height:1.15">Weak trust</div><div style="margin-top:5px;font-size:14px;color:#C79A7E;line-height:1.3">Not enough proof to feel confident.</div></div></div>
+          </div>
+            <div style="position:relative">
+            <div style="position:absolute;right:-26px;top:50%;width:26px;height:1px;background:#6B3A1F"></div>
+            <div style="display:flex;align-items:flex-start;gap:13px;min-height:74px;padding:15px 17px;border:1px solid #FF8A4C;border-radius:12px;background:#241811;box-shadow:0 14px 34px -28px rgba(0,0,0,.65);opacity:var(--lk3, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFA778" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></svg><div><div style="font-size:17px;font-weight:500;color:#FFA778;line-height:1.15">Hidden WhatsApp</div><div style="margin-top:5px;font-size:14px;color:#C79A7E;line-height:1.3">The fastest action is hard to find.</div></div></div>
+          </div>
+          </div>
+          <div style="position:absolute;right:-306px;top:56px;width:280px;display:flex;flex-direction:column;gap:16px;opacity:var(--leak, 0)">
+            <div style="position:relative">
+            <div style="position:absolute;left:-26px;top:50%;width:26px;height:1px;background:#6B3A1F"></div>
+            <div style="display:flex;align-items:flex-start;gap:13px;min-height:74px;padding:15px 17px;border:1px solid #FF8A4C;border-radius:12px;background:#241811;box-shadow:0 14px 34px -28px rgba(0,0,0,.65);opacity:var(--lk4, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFA778" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg><div><div style="font-size:17px;font-weight:500;color:#FFA778;line-height:1.15">No tracking</div><div style="margin-top:5px;font-size:14px;color:#C79A7E;line-height:1.3">You don't know what created the lead.</div></div></div>
+          </div>
+            <div style="position:relative">
+            <div style="position:absolute;left:-26px;top:50%;width:26px;height:1px;background:#6B3A1F"></div>
+            <div style="display:flex;align-items:flex-start;gap:13px;min-height:74px;padding:15px 17px;border:1px solid #FF8A4C;border-radius:12px;background:#241811;box-shadow:0 14px 34px -28px rgba(0,0,0,.65);opacity:var(--lk5, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFA778" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><div><div style="font-size:17px;font-weight:500;color:#FFA778;line-height:1.15">Slow follow-up</div><div style="margin-top:5px;font-size:14px;color:#C79A7E;line-height:1.3">Hot inquiries go cold.</div></div></div>
+          </div>
+            <div style="position:relative">
+            <div style="position:absolute;left:-26px;top:50%;width:26px;height:1px;background:#6B3A1F"></div>
+            <div style="display:flex;align-items:flex-start;gap:13px;min-height:74px;padding:15px 17px;border:1px solid #FF8A4C;border-radius:12px;background:#241811;box-shadow:0 14px 34px -28px rgba(0,0,0,.65);opacity:var(--lk6, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFA778" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><div><div style="font-size:17px;font-weight:500;color:#FFA778;line-height:1.15">Poor local relevance</div><div style="margin-top:5px;font-size:14px;color:#C79A7E;line-height:1.3">The page doesn't match local searches.</div></div></div>
+          </div>
+          </div>
+        </div>
+
+        <div style="position:absolute;left:-200px;top:470px;transform:translate(-50%,-50%);opacity:var(--roomSe, 0)">
+          <div style="width:1000px;display:flex;flex-direction:column;align-items:center;gap:0">
+            <div style="position:relative;min-height:64px;margin-bottom:26px;opacity:var(--seAnn, 0)">
+              <div style="display:flex;align-items:center;gap:13px;min-height:64px;padding:14px 20px;border:1px solid #FF8A4C;border-radius:12px;background:#241811;opacity:calc(1 - var(--se2, 0))"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFA778" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M15 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><div style="font-size:18px;font-weight:500;color:#FFA778">One generic page</div></div>
+              <div style="position:absolute;inset:0;display:flex;align-items:center;gap:13px;padding:14px 20px;border:1px solid #35D07A;border-radius:12px;background:#0E2418;opacity:var(--se2, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7DE8AC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg><div style="font-size:18px;font-weight:500;color:#7DE8AC">A structure search can read</div></div>
+            </div>
+            <div style="padding:14px 22px;border:1px solid #343B37;border-radius:12px;background:#171D1A;font-family:'Geist Mono',monospace;font-size:14px">yourbusiness.in</div>
+            <div style="width:1px;height:34px;background:#343B37;transform:scaleY(var(--se1, 0));transform-origin:top center"></div>
+            <div style="display:grid;grid-template-columns:repeat(3, 300px);gap:50px">
+              <div style="display:flex;flex-direction:column;align-items:center;gap:0;opacity:var(--se2, 0)">
+                <div style="width:100%;padding:14px;border:1px solid var(--accent);border-radius:12px;background:#171D1A;text-align:center;font-size:20px;font-weight:500;color:var(--accent)">Service pages</div>
+                <div style="width:1px;height:26px;background:#343B37"></div>
+                <div style="width:100%;display:flex;flex-direction:column;gap:8px;opacity:var(--se3, 0)">
+                  <div style="padding:11px 14px;background:#232A26;border-radius:8px;font-size:14px">Emergency plumbing</div>
+                  <div style="padding:11px 14px;background:#232A26;border-radius:8px;font-size:14px">Bathroom plumbing</div>
+                  <div style="padding:11px 14px;background:#232A26;border-radius:8px;font-size:14px">Drain cleaning</div>
+                </div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:0;opacity:var(--se3, 0)">
+                <div style="width:100%;padding:14px;border:1px solid var(--accent);border-radius:12px;background:#171D1A;text-align:center;font-size:20px;font-weight:500;color:var(--accent)">Location pages</div>
+                <div style="width:1px;height:26px;background:#343B37"></div>
+                <div style="width:100%;display:flex;flex-direction:column;gap:8px;opacity:var(--se4, 0)">
+                  <div style="padding:11px 14px;background:#232A26;border-radius:8px;font-size:14px">Plumber in Andheri</div>
+                  <div style="padding:11px 14px;background:#232A26;border-radius:8px;font-size:14px">Plumber in Bandra</div>
+                  <div style="padding:11px 14px;background:#232A26;border-radius:8px;font-size:14px">Plumber in Thane</div>
+                </div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:0;opacity:var(--se4, 0)">
+                <div style="width:100%;padding:14px;border:1px solid var(--accent);border-radius:12px;background:#171D1A;text-align:center;font-size:20px;font-weight:500;color:var(--accent)">Content</div>
+                <div style="width:1px;height:26px;background:#343B37"></div>
+                <div style="width:100%;display:flex;flex-direction:column;gap:8px;opacity:var(--se5, 0)">
+                  <div style="padding:11px 14px;background:#232A26;border-radius:8px;font-size:14px">FAQs</div>
+                  <div style="padding:11px 14px;background:#232A26;border-radius:8px;font-size:14px">Testimonials</div>
+                  <div style="padding:11px 14px;background:#232A26;border-radius:8px;font-size:14px">Internal links</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="position:absolute;left:50%;top:452px;transform:translateX(-50%);display:flex;align-items:center;gap:18px;white-space:nowrap;opacity:var(--seOut, 0)">
+            <div style="font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.1em;color:#979D95">LOCAL SEO · STRUCTURE · KEYWORDS</div>
+            <div style="font-size:20px;font-weight:500;color:var(--accent)">More ways to be found</div>
+          </div>
+        </div>
+
+        <div style="position:absolute;left:0px;top:470px;transform:translate(-50%,-50%);opacity:var(--roomCp, 0)">
+          <div style="display:flex;align-items:center;gap:0">
+            <div style="display:flex;flex-direction:column;gap:18px;width:210px">
+              <div style="display:flex;align-items:center;gap:12px;min-height:58px;padding:14px 18px;border:1px solid #35C6AC;border-radius:12px;background:#171D1A;opacity:var(--cp1, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#35C6AC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></svg><div style="font-size:17px;font-weight:500">WhatsApp</div></div>
+              <div style="display:flex;align-items:center;gap:12px;min-height:58px;padding:14px 18px;border:1px solid #35C6AC;border-radius:12px;background:#171D1A;opacity:var(--cp2, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#35C6AC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M13.8 16.6a1 1 0 0 0 1.2-.3l.4-.5a2 2 0 0 1 1.6-.8h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.5.35a1 1 0 0 0-.3 1.25 14 14 0 0 0 6.4 6.4"/></svg><div style="font-size:17px;font-weight:500">Call</div></div>
+              <div style="display:flex;align-items:center;gap:12px;min-height:58px;padding:14px 18px;border:1px solid #35C6AC;border-radius:12px;background:#171D1A;opacity:var(--cp3, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#35C6AC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4"/><path d="M16 3v4"/><path d="M3 11h18"/></svg><div style="font-size:17px;font-weight:500">Book</div></div>
+              <div style="display:flex;align-items:center;gap:12px;min-height:58px;padding:14px 18px;border:1px solid #35C6AC;border-radius:12px;background:#171D1A;opacity:var(--cp4, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#35C6AC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M15 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6"/><path d="M9 17h4"/></svg><div style="font-size:17px;font-weight:500">Form</div></div>
+            </div>
+            <div style="position:relative;width:110px;height:270px">
+              <div style="position:absolute;left:0;top:26px;width:56px;height:2px;background:var(--accent);transform:scaleX(var(--cp1, 0));transform-origin:left center"></div>
+              <div style="position:absolute;left:0;top:100px;width:56px;height:2px;background:var(--accent);transform:scaleX(var(--cp2, 0));transform-origin:left center"></div>
+              <div style="position:absolute;left:0;top:172px;width:56px;height:2px;background:var(--accent);transform:scaleX(var(--cp3, 0));transform-origin:left center"></div>
+              <div style="position:absolute;left:0;top:245px;width:56px;height:2px;background:var(--accent);transform:scaleX(var(--cp4, 0));transform-origin:left center"></div>
+              <div style="position:absolute;left:56px;top:26px;width:2px;height:220px;background:var(--accent);transform:scaleY(var(--cpBus, 0));transform-origin:top center"></div>
+              <div style="position:absolute;left:56px;top:135px;width:54px;height:2px;background:var(--accent);transform:scaleX(var(--cpBus, 0));transform-origin:left center"></div>
+            </div>
+            <div style="width:560px;background:#171D1A;border:1px solid #343B37;border-radius:18px;box-shadow:0 30px 70px -50px rgba(0,0,0,.4);padding:24px;display:flex;flex-direction:column;gap:14px">
+              <div style="display:flex;justify-content:space-between;align-items:center"><div style="font-size:19px;font-weight:500">Lead inbox</div><div style="font-family:'Geist Mono',monospace;font-size:12px;color:var(--accent);opacity:var(--cp8, 0)">4 NEW</div></div>
+              <div style="display:grid;grid-template-columns:1.1fr .9fr 1fr .7fr;gap:10px;font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.08em;color:#979D95;padding-bottom:8px;border-bottom:1px solid #2C3330">
+                <div>SOURCE</div><div>MEDIUM</div><div>LANDING PAGE</div><div>DEVICE</div>
+              </div>
+              <div style="display:grid;grid-template-columns:1.1fr .9fr 1fr .7fr;gap:10px;font-size:13px;opacity:var(--cp5, 0)"><div>WhatsApp</div><div style="color:#A8AEA7">click</div><div style="color:#A8AEA7">/andheri</div><div style="color:#A8AEA7">mobile</div></div>
+              <div style="display:grid;grid-template-columns:1.1fr .9fr 1fr .7fr;gap:10px;font-size:13px;opacity:var(--cp6, 0)"><div>Google profile</div><div style="color:#A8AEA7">gbp_call</div><div style="color:#A8AEA7">/emergency</div><div style="color:#A8AEA7">mobile</div></div>
+              <div style="display:grid;grid-template-columns:1.1fr .9fr 1fr .7fr;gap:10px;font-size:13px;opacity:var(--cp7, 0)"><div>Website form</div><div style="color:#A8AEA7">organic</div><div style="color:#A8AEA7">/leak-repair</div><div style="color:#A8AEA7">desktop</div></div>
+              <div style="display:grid;grid-template-columns:1.1fr .9fr 1fr .7fr;gap:10px;font-size:13px;opacity:var(--cp8, 0)"><div>Booking</div><div style="color:#A8AEA7">referral</div><div style="color:#A8AEA7">/book</div><div style="color:#A8AEA7">mobile</div></div>
+              <div style="font-size:13px;color:#A8AEA7;padding-top:8px;border-top:1px solid #2C3330;opacity:var(--cp8, 0)">Every inquiry keeps its source.</div>
+            </div>
+          </div>
+          <div style="position:absolute;left:0;top:322px;display:flex;align-items:center;gap:18px;white-space:nowrap;opacity:var(--cpOut, 0)">
+            <div style="font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.1em;color:#979D95">WHATSAPP · CALL · BOOKING · FORM</div>
+            <div style="font-size:20px;font-weight:500;color:var(--accent)">Nothing disappears</div>
+          </div>
+        </div>
+
+        <div style="position:absolute;left:200px;top:470px;transform:translate(-50%,-50%);opacity:var(--roomCr, 0)">
+          <div style="width:912px;display:flex;flex-direction:column;gap:26px">
+
+            <div style="position:relative;min-height:64px;width:460px;opacity:var(--crAnn, 0)">
+              <div style="display:flex;align-items:center;gap:13px;min-height:64px;padding:14px 20px;border:1px solid #FF8A4C;border-radius:12px;background:#241811;opacity:calc(1 - var(--cr2, 0))"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFA778" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><div style="font-size:18px;font-weight:500;color:#FFA778">Leads sit with no follow-up</div></div>
+              <div style="position:absolute;inset:0;display:flex;align-items:center;gap:13px;padding:14px 20px;border:1px solid #35D07A;border-radius:12px;background:#0E2418;opacity:var(--cr2, 0)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7DE8AC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg><div style="font-size:18px;font-weight:500;color:#7DE8AC">Every lead gets worked, on time</div></div>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:0">
+              <div style="width:200px;padding:18px;border:1px solid #343B37;border-radius:12px;background:#171D1A;opacity:var(--cr1, 0)"><div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.1em;color:#979D95">NEW</div><div style="margin-top:9px;font-size:17px;font-weight:500">R. Mehta · WhatsApp</div></div>
+              <div style="width:34px;height:2px;background:#A78BFA;transform:scaleX(var(--cr2, 0));transform-origin:left center"></div>
+              <div style="width:200px;padding:18px;border:1px solid #343B37;border-radius:12px;background:#171D1A;opacity:var(--cr2, 0)"><div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.1em;color:#979D95">CONTACTED</div><div style="margin-top:9px;font-size:17px;font-weight:500">Auto reply · 2 min</div></div>
+              <div style="width:34px;height:2px;background:#A78BFA;transform:scaleX(var(--cr3, 0));transform-origin:left center"></div>
+              <div style="width:200px;padding:18px;border:1px solid #A78BFA;border-radius:12px;background:#171D1A;opacity:var(--cr3, 0)"><div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.1em;color:#C4B0FF">BOOKED</div><div style="margin-top:9px;font-size:17px;font-weight:500">Tue · 11:00</div></div>
+              <div style="width:34px;height:2px;background:var(--accent);transform:scaleX(var(--cr4, 0));transform-origin:left center"></div>
+              <div style="width:200px;padding:18px;border:1px solid var(--accent);border-radius:12px;background:#171D1A;opacity:var(--cr4, 0)"><div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.1em;color:var(--accent)">WON</div><div style="margin-top:9px;font-size:17px;font-weight:500">₹18,400 job</div></div>
+            </div>
+
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <div style="padding:11px 16px;border-radius:22px;background:#232A26;font-size:15px;font-weight:500;opacity:var(--cr2, 0)">Auto reply sent</div>
+              <div style="padding:11px 16px;border-radius:22px;background:#232A26;font-size:15px;font-weight:500;opacity:var(--cr3, 0)">Reminder created</div>
+              <div style="padding:11px 16px;border-radius:22px;background:#232A26;font-size:15px;font-weight:500;opacity:var(--cr3, 0)">Follow-up in 2 hrs</div>
+              <div style="padding:11px 16px;border-radius:22px;background:#232A26;font-size:15px;font-weight:500;opacity:var(--cr4, 0)">Task created</div>
+              <div style="padding:11px 16px;border-radius:22px;background:#232A26;font-size:15px;font-weight:500;opacity:var(--cr5, 0)">Notes saved</div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:14px;opacity:var(--crCms, 0)">
+              <div style="display:flex;align-items:center;gap:12px">
+                <div style="font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.1em;color:#C4B0FF">CMS</div>
+                <div style="font-size:18px;font-weight:500">You can change your own content — no developer</div>
+              </div>
+              <div style="display:flex;align-items:stretch;gap:0">
+
+                <div style="width:280px;min-height:176px;background:#171D1A;border:1px solid #343B37;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:12px">
+                  <div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.1em;color:#979D95">01 — CHOOSE A PAGE</div>
+                  <div style="display:flex;flex-direction:column;gap:8px">
+                    <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid #2C3330;border-radius:9px;font-size:15px;color:#A8AEA7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6E7570" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M15 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Home</div>
+                    <div style="position:relative;display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid #A78BFA;border-radius:9px;font-size:15px;font-weight:500;background:#1C1A29"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C4B0FF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M15 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Services<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C4B0FF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M4 3l6 16 2.2-6.4L19 10.5z"/></svg></div>
+                    <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid #2C3330;border-radius:9px;font-size:15px;color:#A8AEA7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6E7570" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M15 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Locations</div>
+                  </div>
+                </div>
+
+                <div style="width:34px;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6E7570" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m14 7 5 5-5 5"/></svg></div>
+
+                <div style="width:280px;min-height:176px;background:#171D1A;border:1px solid #343B37;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:12px;opacity:calc(0.35 + 0.65 * var(--crM1, 0))">
+                  <div style="display:flex;align-items:center;gap:9px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.1em;color:#979D95"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C4B0FF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M21.2 6.5a2 2 0 0 0 0-2.8l-.9-.9a2 2 0 0 0-2.8 0L4 16.3V20h3.7z"/><path d="m15 5 4 4"/></svg>02 — EDIT THE TEXT</div>
+                  <div style="font-size:13px;color:#979D95">Page heading</div>
+                  <div style="position:relative;min-height:64px;padding:13px 14px;border:1px solid #A78BFA;border-radius:10px;background:#1D2420">
+                    <div style="position:absolute;left:14px;right:14px;top:13px;font-size:16px;color:#979D95;opacity:calc(1 - var(--crM2, 0))">Our services</div>
+                    <div style="position:absolute;left:14px;right:14px;top:13px;font-size:16px;font-weight:500;line-height:1.25;opacity:var(--crM2, 0)">Emergency plumbing in Andheri<span style="display:inline-block;width:2px;height:16px;margin-left:3px;vertical-align:-2px;background:#A78BFA"></span></div>
+                  </div>
+                  <div style="font-size:13px;color:#979D95;opacity:var(--crM2, 0)">Edited by you · just now</div>
+                </div>
+
+                <div style="width:34px;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6E7570" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m14 7 5 5-5 5"/></svg></div>
+
+                <div style="width:280px;min-height:176px;background:#171D1A;border:1px solid #343B37;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:12px;opacity:calc(0.35 + 0.65 * var(--crM3, 0))">
+                  <div style="display:flex;align-items:center;gap:9px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.1em;color:#979D95"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7DE8AC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>03 — PUBLISH</div>
+                  <div style="display:flex;align-items:center;gap:10px;padding:11px 13px;border:1px solid #35D07A;border-radius:10px;background:#0E2418;opacity:var(--crM3, 0)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7DE8AC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg><div style="font-size:16px;font-weight:500;color:#7DE8AC">Live on your website</div></div>
+                  <div style="border:1px solid #2C3330;border-radius:10px;overflow:hidden;background:#1D2420">
+                    <div style="height:22px;border-bottom:1px solid #232A26;display:flex;align-items:center;padding:0 10px;font-family:'Geist Mono',monospace;font-size:11px;color:#6E7570">yourbusiness.in/services</div>
+                    <div style="padding:11px 12px;display:flex;flex-direction:column;gap:7px">
+                      <div style="font-size:14px;font-weight:500;color:#7DE8AC;opacity:var(--crM3, 0)">Emergency plumbing in Andheri</div>
+                      <div style="height:6px;background:#232A26;border-radius:4px"></div>
+                      <div style="height:6px;width:72%;background:#232A26;border-radius:4px"></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div style="position:absolute;left:0;bottom:-76px;display:flex;align-items:center;gap:20px;white-space:nowrap;opacity:var(--crOut, 0)">
+            <div style="font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.1em;color:#979D95">RESULT</div>
+            <div style="display:flex;align-items:center;gap:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7DE8AC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M20 6 9 17l-5-5"/></svg><div style="font-size:20px;font-weight:500;color:#7DE8AC">Fewer lost leads, and content you control</div></div>
+          </div>
+        </div>
+
+        <div style="position:absolute;left:400px;top:470px;transform:translate(-50%,-50%);opacity:var(--roomTr, 0)">
+          <div style="width:1000px;display:flex;flex-direction:column;gap:56px">
+            <div style="position:relative;height:70px">
+              <div style="position:absolute;left:20px;right:20px;top:34px;height:2px;background:#343B37"></div>
+              <div style="position:absolute;left:20px;right:20px;top:34px;height:2px;background:#5B9DFF;transform:scaleX(var(--trLine, 0));transform-origin:left center"></div>
+              <div style="position:absolute;left:0;top:0;width:100%;display:flex;justify-content:space-between">
+                <div style="width:150px;text-align:center"><div style="font-size:17px;font-weight:500">Google</div><div style="margin:12px auto 0;width:15px;height:15px;border-radius:50%;background:#5B9DFF;box-shadow:0 0 0 1px #5B9DFF, 0 0 30px -8px #5B9DFF;opacity:var(--tr1, 0)"></div><div style="margin-top:12px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;color:#5B9DFF;opacity:var(--tr1, 0)">TRACKED</div></div>
+                <div style="width:150px;text-align:center"><div style="font-size:17px;font-weight:500">Website</div><div style="margin:12px auto 0;width:15px;height:15px;border-radius:50%;background:#5B9DFF;box-shadow:0 0 0 1px #5B9DFF, 0 0 30px -8px #5B9DFF;opacity:var(--tr2, 0)"></div><div style="margin-top:12px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;color:#5B9DFF;opacity:var(--tr2, 0)">TRACKED</div></div>
+                <div style="width:150px;text-align:center"><div style="font-size:17px;font-weight:500">WhatsApp</div><div style="margin:12px auto 0;width:15px;height:15px;border-radius:50%;background:#5B9DFF;box-shadow:0 0 0 1px #5B9DFF, 0 0 30px -8px #5B9DFF;opacity:var(--tr3, 0)"></div><div style="margin-top:12px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;color:#5B9DFF;opacity:var(--tr3, 0)">TRACKED</div></div>
+                <div style="width:150px;text-align:center"><div style="font-size:17px;font-weight:500">Form</div><div style="margin:12px auto 0;width:15px;height:15px;border-radius:50%;background:#5B9DFF;box-shadow:0 0 0 1px #5B9DFF, 0 0 30px -8px #5B9DFF;opacity:var(--tr4, 0)"></div><div style="margin-top:12px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;color:#5B9DFF;opacity:var(--tr4, 0)">TRACKED</div></div>
+                <div style="width:150px;text-align:center"><div style="font-size:17px;font-weight:500">CRM</div><div style="margin:12px auto 0;width:15px;height:15px;border-radius:50%;background:#5B9DFF;box-shadow:0 0 0 1px #5B9DFF, 0 0 30px -8px #5B9DFF;opacity:var(--tr5, 0)"></div><div style="margin-top:12px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;color:#5B9DFF;opacity:var(--tr5, 0)">TRACKED</div></div>
+                <div style="width:150px;text-align:center"><div style="font-size:17px;font-weight:500">Booked</div><div style="margin:12px auto 0;width:15px;height:15px;border-radius:50%;background:#5B9DFF;box-shadow:0 0 0 1px #5B9DFF, 0 0 30px -8px #5B9DFF;opacity:var(--tr6, 0)"></div><div style="margin-top:12px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;color:#5B9DFF;opacity:var(--tr6, 0)">TRACKED</div></div>
+              </div>
+              <div style="position:absolute;left:50%;top:-34px;transform:translateX(-50%);font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#5B9DFF;opacity:var(--tr6, 0)">TRACKED END TO END</div>
+            </div>
+            <div style="background:#171D1A;border:1px solid #343B37;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:20px;opacity:var(--trPanel, 0)">
+              <div style="display:grid;grid-template-columns:repeat(6, minmax(0, 1fr));gap:12px">
+                <div><div style="font-size:12px;color:#A8AEA7">Leads</div><div style="font-size:24px;font-weight:500;margin-top:4px">148</div></div>
+                <div><div style="font-size:12px;color:#A8AEA7">Calls</div><div style="font-size:24px;font-weight:500;margin-top:4px">63</div></div>
+                <div><div style="font-size:12px;color:#A8AEA7">WhatsApp</div><div style="font-size:24px;font-weight:500;margin-top:4px">51</div></div>
+                <div><div style="font-size:12px;color:#A8AEA7">Forms</div><div style="font-size:24px;font-weight:500;margin-top:4px">34</div></div>
+                <div><div style="font-size:12px;color:#A8AEA7">GBP actions</div><div style="font-size:24px;font-weight:500;margin-top:4px">912</div></div>
+                <div><div style="font-size:12px;color:#A8AEA7">Conversion</div><div style="font-size:24px;font-weight:500;margin-top:4px">7.4%</div></div>
+              </div>
+              <div style="display:flex;align-items:flex-end;gap:8px;height:80px">
+                <div style="flex:1;height:32%;background:#3A423D;border-radius:3px"></div>
+                <div style="flex:1;height:40%;background:#3A423D;border-radius:3px"></div>
+                <div style="flex:1;height:36%;background:#3A423D;border-radius:3px"></div>
+                <div style="flex:1;height:52%;background:#5B9DFF;border-radius:3px"></div>
+                <div style="flex:1;height:61%;background:#5B9DFF;border-radius:3px"></div>
+                <div style="flex:1;height:57%;background:#5B9DFF;border-radius:3px"></div>
+                <div style="flex:1;height:73%;background:#5B9DFF;border-radius:3px"></div>
+                <div style="flex:1;height:80%;background:#5B9DFF;border-radius:3px"></div>
+                <div style="flex:1;height:95%;background:#5B9DFF;border-radius:3px"></div>
+              </div>
+            </div>
+          </div>
+          <div style="position:absolute;left:0;top:452px;display:flex;align-items:center;gap:18px;white-space:nowrap;opacity:var(--trOut, 0)">
+            <div style="font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.1em;color:#979D95">ANALYTICS · ATTRIBUTION · CONVERSION TRACKING</div>
+            <div style="font-size:20px;font-weight:500;color:#5B9DFF">Know what works</div>
+          </div>
+        </div>
+
+        <div style="position:absolute;left:600px;top:470px;transform:translate(-50%,-50%);opacity:var(--roomRv, 0)">
+          <div style="display:flex;align-items:center;gap:0">
+            <div style="width:210px;padding:18px;border:1px solid var(--accent);border-radius:12px;background:#171D1A;opacity:var(--rv1, 0)"><div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.1em;color:var(--accent)">WON</div><div style="margin-top:9px;font-size:17px;font-weight:500">N. Rao · Andheri</div></div>
+            <div style="width:40px;height:2px;background:var(--accent);transform:scaleX(var(--rv2, 0));transform-origin:left center"></div>
+            <div style="width:210px;padding:18px;border:1px solid #343B37;border-radius:12px;background:#171D1A;opacity:var(--rv2, 0)"><div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.1em;color:#979D95;display:flex;align-items:center;gap:9px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3C34E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></svg>REQUEST</div><div style="margin-top:9px;font-size:17px;font-weight:500">Review link sent</div></div>
+            <div style="width:40px;height:2px;background:var(--accent);transform:scaleX(var(--rv3, 0));transform-origin:left center"></div>
+            <div style="width:280px;padding:18px;border:1px solid #343B37;border-radius:12px;background:#171D1A;opacity:var(--rv3, 0)"><div style="display:flex;justify-content:space-between;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.1em;color:#979D95"><span style="display:flex;align-items:center;gap:9px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3C34E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="m12 3 2.7 5.5 6 .9-4.35 4.25 1.03 6-5.38-2.83L6.62 19.65l1.03-6L3.3 9.4l6-.9z"/></svg>GOOGLE REVIEW</span><span>4.9 ★</span></div><div style="margin-top:9px;font-size:16px">“Came within the hour, fair price.”</div></div>
+            <div style="width:40px;height:2px;background:var(--accent);transform:scaleX(var(--rv4, 0));transform-origin:left center"></div>
+            <div style="width:240px;padding:18px;border:1px solid #343B37;border-radius:12px;background:#171D1A;opacity:var(--rv4, 0)"><div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.1em;color:#979D95;display:flex;align-items:center;gap:9px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F3C34E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M15 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6"/><path d="M9 17h4"/></svg>WEBSITE</div><div style="margin-top:9px;font-size:16px">Published as proof</div></div>
+          </div>
+          <div style="position:absolute;left:50%;top:150px;transform:translateX(-50%);display:flex;align-items:center;gap:14px;opacity:var(--rv5, 0)">
+            <div style="padding:10px 16px;border:1px solid var(--accent);border-radius:20px;background:#171D1A;font-size:14px;color:var(--accent)">Google profile · trust up</div>
+            <div style="width:40px;height:2px;background:var(--accent)"></div>
+            <div style="padding:10px 16px;border:1px solid var(--accent);border-radius:20px;background:#171D1A;font-size:14px;color:var(--accent)">Website · proof up</div>
+          </div>
+          <div style="position:absolute;left:0;top:240px;display:flex;align-items:center;gap:18px;white-space:nowrap;opacity:var(--rvOut, 0)">
+            <div style="font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.1em;color:#979D95">REVIEWS · REPUTATION · TESTIMONIALS</div>
+            <div style="font-size:20px;font-weight:500;color:var(--accent)">More trust compounds</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none">
+      <div style="position:absolute;left:0;right:0;bottom:0;height:34vh;background:linear-gradient(to top, #0A0C0B 0%, rgba(10,12,11,.95) 42%, rgba(10,12,11,0) 100%)"></div>
+      <div style="position:absolute;left:0;right:0;top:0;height:12vh;background:linear-gradient(to bottom, #0A0C0B 0%, rgba(10,12,11,.88) 45%, rgba(10,12,11,0) 100%)"></div>
+      <div style="position:absolute;left:0;top:0;width:100%;height:100%;background:#EDEBE3;opacity:var(--dark, 0)"></div>
+
+      <div style="position:absolute;left:0;right:0;top:0;display:flex;justify-content:space-between;align-items:center;padding:26px clamp(24px, 6vw, 84px)">
+        <div style="font-size:19px;font-weight:600;letter-spacing:-.01em;color:var(--ink, #F2F1EA)">uplof</div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <a href="tel:+919876543210" style="pointer-events:auto;padding:11px 20px;border:1px solid var(--ink, #F2F1EA);border-radius:22px;font-size:14px;color:var(--ink, #F2F1EA);background:var(--pill, rgba(247,245,237,.6))">Call us</a>
+          <a href="#" download style="pointer-events:auto;display:flex;align-items:center;gap:9px;padding:11px 20px;border:1px solid var(--accent);border-radius:22px;font-size:14px;color:var(--accent);background:var(--pill, rgba(247,245,237,.6))"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M12 3v12"></path><path d="m7 11 5 5 5-5"></path><path d="M4 20h16"></path></svg>Download brochure</a>
+        </div>
+      </div>
+
+      <div style="position:absolute;left:50%;top:23vh;transform:translate(-50%,-50%);width:min(680px, calc(100vw - 48px));text-align:center;opacity:var(--t1, 1)">
+        <div style="font-size:clamp(32px, 4.4vw, 56px);line-height:1.06;font-weight:500;letter-spacing:-.03em;text-wrap:balance">Your website should bring leads.</div>
+        <div style="margin-top:16px;font-size:clamp(16px, 1.4vw, 19px);color:#A8AEA7">I fix the path from search to inquiry.</div>
+      </div>
+      <div style="position:absolute;left:50%;bottom:150px;transform:translateX(-50%);width:min(640px, calc(100vw - 48px));text-align:center;font-size:16px;color:#A8AEA7;text-wrap:pretty;opacity:var(--curs, 0)">Every question they have to ask is a lead you lose. Uplof answers all of them — on the page, in the profile, and in the follow-up.</div>
+      <div style="position:absolute;left:50%;bottom:104px;transform:translateX(-50%);font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#979D95;white-space:nowrap;opacity:var(--t1, 1)">SCROLL TO SEE WHERE LEADS LEAK</div>
+
+      <div style="position:absolute;left:clamp(24px, 6vw, 84px);bottom:118px;width:min(520px, calc(100vw - 48px))">
+        <div style="position:absolute;left:0;bottom:0;width:100%;opacity:var(--t2, 0);transform:translateY(calc((1 - var(--t2, 0)) * 12px))">
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#FFA778">02 — THE LEAK</div>
+          <div style="margin-top:10px;font-size:clamp(26px, 2.4vw, 34px);font-weight:500;letter-spacing:-.02em">Where leads leak.</div>
+          <div style="margin-top:10px;font-size:16px;color:#A8AEA7;text-wrap:pretty">Under-optimised, unclear, untracked. The inquiry quietly goes somewhere else.</div>
+        </div>
+        <div style="position:absolute;left:0;bottom:0;width:100%;opacity:var(--t3, 0);transform:translateY(calc((1 - var(--t3, 0)) * 12px))">
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#FFA778">03 — YOUR LEAD SYSTEM</div>
+          <div style="margin-top:10px;font-size:clamp(26px, 2.4vw, 34px);font-weight:500;letter-spacing:-.02em">Your website isn't the whole problem.</div>
+          <div style="margin-top:10px;font-size:16px;color:#A8AEA7;text-wrap:pretty">Seven parts decide whether a search becomes an inquiry. Right now they're disconnected.</div>
+        </div>
+        <div style="position:absolute;left:0;bottom:0;width:100%;opacity:var(--t4, 0);transform:translateY(calc((1 - var(--t4, 0)) * 12px))">
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#979D95">04 — GOOGLE BUSINESS PROFILE</div>
+          <div style="margin-top:10px;font-size:clamp(26px, 2.4vw, 34px);font-weight:500;letter-spacing:-.02em">Fix where the search starts.</div>
+          <div style="margin-top:10px;font-size:16px;color:#A8AEA7;text-wrap:pretty">Category, services, photos, questions, reviews, and actions people can tap.</div>
+        </div>
+        <div style="position:absolute;left:0;bottom:0;width:100%;opacity:var(--t5, 0);transform:translateY(calc((1 - var(--t5, 0)) * 12px))">
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#979D95">05 — WEBSITE + LANDING PAGE</div>
+          <div style="margin-top:10px;font-size:clamp(26px, 2.4vw, 34px);font-weight:500;letter-spacing:-.02em">Make the visit an inquiry.</div>
+          <div style="margin-top:10px;font-size:16px;color:#A8AEA7;text-wrap:pretty">One clear local offer, three obvious ways to contact you, and proof underneath.</div>
+        </div>
+        <div style="position:absolute;left:0;bottom:0;width:100%;opacity:var(--t6, 0);transform:translateY(calc((1 - var(--t6, 0)) * 12px))">
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#979D95">06 — PAGES + LOCAL SEO</div>
+          <div style="margin-top:10px;font-size:clamp(26px, 2.4vw, 34px);font-weight:500;letter-spacing:-.02em">One site becomes a structure.</div>
+          <div style="margin-top:10px;font-size:16px;color:#A8AEA7;text-wrap:pretty">Service pages, location pages and content — linked so search can read all of it.</div>
+        </div>
+        <div style="position:absolute;left:0;bottom:0;width:100%;opacity:var(--t7, 0);transform:translateY(calc((1 - var(--t7, 0)) * 12px))">
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#979D95">07 — WHATSAPP + FORM CAPTURE</div>
+          <div style="margin-top:10px;font-size:clamp(26px, 2.4vw, 34px);font-weight:500;letter-spacing:-.02em">Every inquiry lands somewhere.</div>
+          <div style="margin-top:10px;font-size:16px;color:#A8AEA7;text-wrap:pretty">Chat, call, booking and form arrive in one inbox — each with the source that made it.</div>
+        </div>
+        <div style="position:absolute;left:0;bottom:0;width:100%;opacity:var(--t8, 0);transform:translateY(calc((1 - var(--t8, 0)) * 12px))">
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#979D95">08 — CMS + CRM + FOLLOW-UP</div>
+          <div style="margin-top:10px;font-size:clamp(26px, 2.4vw, 34px);font-weight:500;letter-spacing:-.02em">Leads get followed up.</div>
+          <div style="margin-top:10px;font-size:16px;color:#A8AEA7;text-wrap:pretty">One pipeline from new to won, with replies, reminders and tasks happening on their own.</div>
+        </div>
+        <div style="position:absolute;left:0;bottom:0;width:100%;opacity:var(--t9, 0);transform:translateY(calc((1 - var(--t9, 0)) * 12px))">
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#5B9DFF">09 — TRACKING + ANALYTICS</div>
+          <div style="margin-top:10px;font-size:clamp(26px, 2.4vw, 34px);font-weight:500;letter-spacing:-.02em">Measure the whole journey.</div>
+          <div style="margin-top:10px;font-size:16px;color:#A8AEA7;text-wrap:pretty">Every step from search to booked job is tracked, so you know what actually brings leads.</div>
+        </div>
+        <div style="position:absolute;left:0;bottom:0;width:100%;opacity:var(--t10, 0);transform:translateY(calc((1 - var(--t10, 0)) * 12px))">
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#979D95">10 — REVIEWS + REPUTATION</div>
+          <div style="margin-top:10px;font-size:clamp(26px, 2.4vw, 34px);font-weight:500;letter-spacing:-.02em">Good work becomes proof.</div>
+          <div style="margin-top:10px;font-size:16px;color:#A8AEA7;text-wrap:pretty">A won job turns into a review, and that review helps win the next customer.</div>
+        </div>
+        <div style="position:absolute;left:0;bottom:0;width:100%;opacity:var(--t11, 0);transform:translateY(calc((1 - var(--t11, 0)) * 12px))">
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--accent)">11 — THE SYSTEM</div>
+          <div style="margin-top:10px;font-size:clamp(26px, 2.4vw, 34px);font-weight:500;letter-spacing:-.02em">Now it works as one system.</div>
+          <div style="margin-top:10px;font-size:16px;color:#A8AEA7;text-wrap:pretty">The same seven parts you saw disconnected — connected, in order, end to end.</div>
+        </div>
+        <div style="position:absolute;left:0;bottom:0;width:100%;opacity:var(--t12, 0);transform:translateY(calc((1 - var(--t12, 0)) * 12px))">
+          <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#979D95">12 — EVERY MONTH</div>
+          <div style="margin-top:10px;font-size:clamp(26px, 2.4vw, 34px);font-weight:500;letter-spacing:-.02em">It doesn't stop at launch.</div>
+          <div style="margin-top:10px;font-size:16px;color:#A8AEA7;text-wrap:pretty">Measure what works. Improve what doesn't. Every month.</div>
+        </div>
+      </div>
+
+      <div style="position:absolute;left:0;top:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:13vh clamp(24px, 6vw, 84px) 15vh;box-sizing:border-box;opacity:var(--founder, 0)">
+        <div style="display:flex;flex-wrap:wrap;gap:clamp(30px, 5vw, 64px);align-items:center;justify-content:center;width:100%;max-width:1020px">
+          <div style="flex:0 0 auto;width:min(300px, 38vw)">
+            <div style="position:relative;width:100%;aspect-ratio:4 / 5;max-height:48vh;border-radius:18px;overflow:hidden;border:1px solid rgba(12,15,13,.16);background:#DAD7CD">
+              <image-slot id="uplof-v3-founder" shape="rect" fit="cover" placeholder="Drop your photo here"></image-slot>
+            </div>
+            <div style="margin-top:14px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.14em;color:rgba(12,15,13,.45)">FOUNDER · UPLOF</div>
+          </div>
+          <div style="flex:1 1 400px;min-width:300px">
+            <div style="font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.14em;color:rgba(12,15,13,.45)">12 — WHO YOU WORK WITH</div>
+            <div style="margin-top:22px;font-size:clamp(26px, 2.9vw, 38px);line-height:1.18;font-weight:400;letter-spacing:-.02em;color:#0C0F0D;text-wrap:pretty">“Most local businesses don't need more marketing. They need the path from search to inquiry to actually work.”</div>
+            <div style="margin-top:24px;display:flex;align-items:center;gap:14px">
+              <div style="width:34px;height:1px;background:rgba(12,15,13,.3)"></div>
+              <div style="font-size:16px;color:rgba(12,15,13,.72)">You work directly with me — no account managers, no handovers.</div>
+            </div>
+            <div style="margin-top:26px;display:flex;flex-wrap:wrap;gap:9px">
+              <div style="padding:10px 17px;border:1px solid rgba(12,15,13,.22);border-radius:22px;font-size:15px;color:rgba(12,15,13,.86)">Audit</div>
+              <div style="padding:10px 17px;border:1px solid rgba(12,15,13,.22);border-radius:22px;font-size:15px;color:rgba(12,15,13,.86)">Design</div>
+              <div style="padding:10px 17px;border:1px solid rgba(12,15,13,.22);border-radius:22px;font-size:15px;color:rgba(12,15,13,.86)">Build</div>
+              <div style="padding:10px 17px;border:1px solid rgba(12,15,13,.22);border-radius:22px;font-size:15px;color:rgba(12,15,13,.86)">Track</div>
+              <div style="padding:10px 17px;border:1px solid rgba(12,15,13,.22);border-radius:22px;font-size:15px;color:rgba(12,15,13,.86)">Improve</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="position:absolute;left:0;top:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:14vh clamp(24px, 6vw, 84px) 16vh;box-sizing:border-box;opacity:var(--cta, 0);pointer-events:var(--ctaPE, none)">
+        <div style="display:flex;flex-wrap:wrap;gap:clamp(28px, 5vw, 72px);align-items:center;justify-content:center;width:100%;max-width:1000px">
+          <div style="flex:1 1 320px;min-width:280px">
+            <div style="font-size:clamp(28px, 3.2vw, 44px);line-height:1.08;font-weight:500;letter-spacing:-.025em;text-wrap:pretty;color:#0C0F0D">Find where your leads are leaking.</div>
+            <div style="margin-top:16px;font-size:17px;color:rgba(12,15,13,.68);text-wrap:pretty">Let's fix the path from search to steady inquiries.</div>
+            <div style="margin-top:22px;display:flex;flex-wrap:wrap;gap:8px;font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.1em;color:rgba(12,15,13,.5)">
+              <span>GOOGLE</span><span>→</span><span>WEBSITE</span><span>→</span><span>CAPTURE</span><span>→</span><span>CRM</span><span>→</span><span>CUSTOMER</span><span>→</span><span>REVIEW</span>
+            </div>
+          </div>
+          <div style="flex:1 1 340px;min-width:290px;background:rgba(12,15,13,.045);border:1px solid rgba(12,15,13,.16);border-radius:18px;padding:26px">
+            <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:30px 0;text-align:center">
+                <div style="font-size:22px;font-weight:500;color:#0C0F0D">Thanks — I'll be in touch.</div>
+                <div style="margin-top:10px;font-size:15px;color:rgba(12,15,13,.62)">Usually within a few hours.</div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+              <form onSubmit="{{ onSubmit }}" style="display:flex;flex-direction:column;gap:12px">
+                <input type="text" placeholder="Name" style="padding:14px 15px;border:1px solid rgba(12,15,13,.2);border-radius:10px;background:rgba(12,15,13,.05);font-size:15px;color:#0C0F0D" />
+                <input type="text" placeholder="Business name" style="padding:14px 15px;border:1px solid rgba(12,15,13,.2);border-radius:10px;background:rgba(12,15,13,.05);font-size:15px;color:#0C0F0D" />
+                <input type="text" placeholder="Website (if any)" style="padding:14px 15px;border:1px solid rgba(12,15,13,.2);border-radius:10px;background:rgba(12,15,13,.05);font-size:15px;color:#0C0F0D" />
+                <input type="tel" placeholder="Phone / WhatsApp" style="padding:14px 15px;border:1px solid rgba(12,15,13,.2);border-radius:10px;background:rgba(12,15,13,.05);font-size:15px;color:#0C0F0D" />
+                <textarea rows="3" placeholder="Where do you think leads are leaking?" style="padding:14px 15px;border:1px solid rgba(12,15,13,.2);border-radius:10px;background:rgba(12,15,13,.05);font-size:15px;color:#0C0F0D;resize:vertical"></textarea>
+                <button type="submit" style="margin-top:4px;padding:16px;border:none;border-radius:10px;background:var(--accent);color:#08120B;font-size:16px;font-weight:500;cursor:pointer">Request free lead audit</button>
+                <div style="text-align:center;font-size:13px;color:rgba(12,15,13,.55)">Takes 2 mins</div>
+              </form>
+            </sc-if>
+          </div>
+        </div>
+      </div>
+
+      <div style="position:absolute;left:clamp(24px, 6vw, 84px);right:clamp(24px, 6vw, 84px);bottom:36px;display:flex;flex-direction:column;gap:12px;opacity:var(--chrome, 1)">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--muted, #979D95)">
+          <div ref="{{ refLabel }}">01 / HERO</div>
+          <div ref="{{ refHealth }}">SYSTEM HEALTH — 0 / 7 FIXED</div>
+        </div>
+        <div style="display:flex;gap:6px;align-items:center">
+          <div style="flex:1;height:2px;background:var(--track, rgba(242,241,234,.2));position:relative"><div style="position:absolute;inset:0;background:var(--accent);transform:scaleX(var(--d1, 1));transform-origin:left center"></div></div>
+          <div style="flex:1;height:2px;background:var(--track, rgba(242,241,234,.2));position:relative"><div style="position:absolute;inset:0;background:var(--accent);transform:scaleX(var(--d2, 0));transform-origin:left center"></div></div>
+          <div style="flex:1;height:2px;background:var(--track, rgba(242,241,234,.2));position:relative"><div style="position:absolute;inset:0;background:var(--accent);transform:scaleX(var(--d3, 0));transform-origin:left center"></div></div>
+          <div style="flex:1;height:2px;background:var(--track, rgba(242,241,234,.2));position:relative"><div style="position:absolute;inset:0;background:var(--accent);transform:scaleX(var(--d4, 0));transform-origin:left center"></div></div>
+          <div style="flex:1;height:2px;background:var(--track, rgba(242,241,234,.2));position:relative"><div style="position:absolute;inset:0;background:var(--accent);transform:scaleX(var(--d5, 0));transform-origin:left center"></div></div>
+          <div style="flex:1;height:2px;background:var(--track, rgba(242,241,234,.2));position:relative"><div style="position:absolute;inset:0;background:var(--accent);transform:scaleX(var(--d6, 0));transform-origin:left center"></div></div>
+          <div style="flex:1;height:2px;background:var(--track, rgba(242,241,234,.2));position:relative"><div style="position:absolute;inset:0;background:var(--accent);transform:scaleX(var(--d7, 0));transform-origin:left center"></div></div>
+          <div style="flex:1;height:2px;background:var(--track, rgba(242,241,234,.2));position:relative"><div style="position:absolute;inset:0;background:var(--accent);transform:scaleX(var(--d8, 0));transform-origin:left center"></div></div>
+          <div style="flex:1;height:2px;background:var(--track, rgba(242,241,234,.2));position:relative"><div style="position:absolute;inset:0;background:var(--accent);transform:scaleX(var(--d9, 0));transform-origin:left center"></div></div>
+          <div style="flex:1;height:2px;background:var(--track, rgba(242,241,234,.2));position:relative"><div style="position:absolute;inset:0;background:var(--accent);transform:scaleX(var(--d10, 0));transform-origin:left center"></div></div>
+          <div style="flex:1;height:2px;background:var(--track, rgba(242,241,234,.2));position:relative"><div style="position:absolute;inset:0;background:var(--accent);transform:scaleX(var(--d11, 0));transform-origin:left center"></div></div>
+          <div style="flex:1;height:2px;background:var(--track, rgba(242,241,234,.2));position:relative"><div style="position:absolute;inset:0;background:var(--accent);transform:scaleX(var(--d12, 0));transform-origin:left center"></div></div>
+          <div style="flex:1;height:2px;background:var(--track, rgba(242,241,234,.2));position:relative"><div style="position:absolute;inset:0;background:var(--accent);transform:scaleX(var(--d13, 0));transform-origin:left center"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="background:#EDEBE3;padding:34px clamp(24px, 6vw, 84px);display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center;font-size:14px;color:rgba(12,15,13,.6)">
+  <div style="font-size:17px;font-weight:600;color:#0C0F0D">uplof</div>
+  <div style="display:flex;flex-wrap:wrap;gap:26px">
+    <a href="tel:+919876543210">+91 98765 43210</a>
+    <a href="mailto:hello@uplof.in">hello@uplof.in</a>
+    <span>uplof.in</span>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#35D07A&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#35D07A&quot;,&quot;#5FE3A1&quot;,&quot;#5B9DFF&quot;,&quot;#F3C34E&quot;],&quot;section&quot;:&quot;Look&quot;},&quot;storyLength&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1700,&quot;min&quot;:900,&quot;max&quot;:2600,&quot;step&quot;:50,&quot;unit&quot;:&quot;vh&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;smoothing&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.135,&quot;min&quot;:0.04,&quot;max&quot;:0.35,&quot;step&quot;:0.005,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;snap&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;showProgress&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Look&quot;}}">
+class Component extends DCLogic {
+  state = { sent: false };
+
+  constructor(p) {
+    super(p);
+    const LINE = { x: 0, y: 40, w: 1420, h: 560 };
+    this.SV = [
+      { k: "gg", i: 1, a: 0.190, b: 0.292, x: -600, rx: 15, ry: 478, rw: 1330, rh: 840, c: "#6BA5FF" },
+      { k: "wb", i: 2, a: 0.292, b: 0.398, x: -400, rx: -140, ry: 492, rw: 1500, rh: 780, c: "#5FE3A1" },
+      { k: "se", i: 3, a: 0.398, b: 0.489, x: -200, rx: 0, ry: 545, rw: 1130, rh: 730, c: "#F5BE4A" },
+      { k: "cp", i: 4, a: 0.489, b: 0.585, x: 0, rx: 0, ry: 512, rw: 1020, rh: 500, c: "#35C6AC" },
+      { k: "cr", i: 5, a: 0.585, b: 0.680, x: 200, rx: 0, ry: 545, rw: 1080, rh: 780, c: "#A78BFA" },
+      { k: "tr", i: 6, a: 0.680, b: 0.770, x: 400, rx: 0, ry: 545, rw: 1150, rh: 620, c: "#5B9DFF" },
+      { k: "rv", i: 7, a: 0.770, b: 0.855, x: 600, rx: 0, ry: 552, rw: 1200, rh: 420, c: "#F3C34E" }
+    ];
+    const K = [
+      { p: 0.000, x: -400, y: 200, w: 1520, h: 1080 },
+      { p: 0.048, x: -400, y: 400, w: 1320, h: 780 },
+      { p: 0.082, x: -400, y: 500, w: 1720, h: 840 },
+      { p: 0.112, x: -400, y: 490, w: 1760, h: 880 },
+      { p: 0.148, x: -320, y: 250, w: 1560, h: 1050 },
+      { p: 0.174, x: LINE.x, y: LINE.y, w: LINE.w, h: LINE.h },
+      { p: 0.190, x: LINE.x, y: LINE.y, w: LINE.w, h: LINE.h }
+    ];
+    this.SV.forEach((s) => {
+      const sp = s.b - s.a;
+      K.push({ p: s.a + 0.05 * sp, x: s.x, y: 55, w: 760, h: 470 });
+      K.push({ p: s.a + 0.20 * sp, x: s.x + s.rx, y: s.ry, w: s.rw, h: s.rh });
+      K.push({ p: s.b - 0.10 * sp, x: s.x + s.rx, y: s.ry, w: s.rw * 0.97, h: s.rh * 0.97 });
+      K.push({ p: s.b - 0.04 * sp, x: s.x, y: 55, w: 760, h: 470 });
+      K.push({ p: s.b, x: LINE.x, y: LINE.y, w: LINE.w, h: LINE.h });
+    });
+    for (let n = 1; n < K.length; n++) if (K[n].p <= K[n - 1].p) K[n].p = K[n - 1].p + 0.001;
+    K.push({ p: 0.900, x: 0, y: 70, w: 1460, h: 620 });
+    K.push({ p: 0.922, x: 0, y: 130, w: 1520, h: 780 });
+    K.push({ p: 1.000, x: 0, y: 130, w: 1560, h: 800 });
+    this.K = K;
+    this.stops = [0, 0.048, 0.112, 0.190, 0.292, 0.398, 0.489, 0.585, 0.680, 0.770, 0.855, 0.940, 0.973];
+    this.labels = ["01 / HERO", "02 / LEAK", "03 / SYSTEM", "04 / GOOGLE", "05 / WEBSITE", "06 / LOCAL SEO", "07 / CAPTURE", "08 / CRM", "09 / TRACKING", "10 / REVIEWS", "11 / CONNECTED", "12 / FOUNDER", "13 / CONTACT"];
+    this.refRoot = (el) => { this.root = el; };
+    this.refStage = (el) => { this.stage = el; };
+    this.refLabel = (el) => { this.label = el; };
+    this.refHealth = (el) => { this.health = el; };
+  }
+
+  buildBeats() {
+    const beats = [0, 0.048, 0.112, 0.152, 0.178];
+    this.SV.forEach((s) => {
+      const sp = s.b - s.a;
+      beats.push(s.a + 0.14 * sp);
+      beats.push(s.a + 0.40 * sp);
+      beats.push(s.a + 0.87 * sp);
+    });
+    beats.push(0.868, 0.898, 0.952, 0.982, 1);
+    return beats.sort((x, y) => x - y);
+  }
+
+  trySnap() {
+    if (this.props.snap === false || this.reduced || !this.root) return;
+    const h = this.root.offsetHeight - window.innerHeight;
+    if (h <= 0) return;
+    let best = null, bd = 0.0135;
+    this.beats.forEach((b) => {
+      const d = Math.abs(b - this.target);
+      if (d < bd) { bd = d; best = b; }
+    });
+    if (best === null || bd < 0.0007) return;
+    this.snapFrom = window.scrollY;
+    this.snapTo = this.root.offsetTop + best * h;
+    if (Math.abs(this.snapTo - this.snapFrom) < 2) return;
+    this.snapT0 = performance.now();
+    this.snapping = true;
+  }
+
+  componentDidMount() {
+    this.cur = 0; this.mid = 0; this.target = 0; this.lastIdx = -1; this.lastFixed = -1;
+    this.beats = this.buildBeats();
+    this.snapping = false;
+    this.reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (this.root) this.root.style.setProperty("--len", String(this.props.storyLength ?? 1700));
+    this.read = () => {
+      if (!this.root) return;
+      const h = this.root.offsetHeight - window.innerHeight;
+      const y = window.scrollY - this.root.offsetTop;
+      this.target = h > 0 ? Math.min(1, Math.max(0, y / h)) : 0;
+    };
+    this.schedule = () => {
+      clearTimeout(this.idle);
+      this.idle = setTimeout(() => this.trySnap(), 190);
+    };
+    this.onScroll = () => { this.read(); if (!this.snapping) this.schedule(); };
+    this.onInput = () => { this.snapping = false; this.schedule(); };
+    window.addEventListener("scroll", this.onScroll, { passive: true });
+    window.addEventListener("resize", this.read, { passive: true });
+    window.addEventListener("wheel", this.onInput, { passive: true });
+    window.addEventListener("touchstart", this.onInput, { passive: true });
+    window.addEventListener("keydown", this.onInput);
+    this.read();
+    this.cur = this.target; this.mid = this.target;
+    const loop = () => {
+      if (this.snapping) {
+        const t = Math.min(1, (performance.now() - this.snapT0) / 640);
+        const e = 1 - Math.pow(1 - t, 3);
+        window.scrollTo(0, this.snapFrom + (this.snapTo - this.snapFrom) * e);
+        this.read();
+        if (t >= 1) this.snapping = false;
+      }
+      const k = this.reduced ? 1 : (this.props.smoothing ?? 0.135);
+      this.mid += (this.target - this.mid) * k;
+      this.cur += (this.mid - this.cur) * k;
+      if (Math.abs(this.target - this.cur) < 0.00003) { this.cur = this.target; this.mid = this.target; }
+      this.apply(this.cur);
+      this.rafId = requestAnimationFrame(loop);
+    };
+    loop();
+  }
+
+  componentWillUnmount() {
+    cancelAnimationFrame(this.rafId);
+    clearTimeout(this.idle);
+    window.removeEventListener("scroll", this.onScroll);
+    window.removeEventListener("resize", this.read);
+    window.removeEventListener("wheel", this.onInput);
+    window.removeEventListener("touchstart", this.onInput);
+    window.removeEventListener("keydown", this.onInput);
+  }
+
+  apply(p) {
+    const st = this.stage;
+    if (!st) return;
+    const cl = (v) => Math.min(1, Math.max(0, v));
+    const S = (a, b) => cl((p - a) / (b - a));
+    const band = (a, b, c, d) => Math.min(S(a, b), 1 - S(c, d));
+    const lerp = (a, b, t) => a + (b - a) * t;
+    const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+
+    const K = this.K;
+    let i = 0;
+    while (i < K.length - 1 && p > K[i + 1].p) i++;
+    const a = K[i], b = K[Math.min(i + 1, K.length - 1)];
+    const t = b.p > a.p ? ease(cl((p - a.p) / (b.p - a.p))) : 1;
+
+    const vw = window.innerWidth, vh = window.innerHeight;
+    const padX = Math.max(28, Math.min(vw * 0.07, 96));
+    const topSafe = vh < 620 ? 74 : 104;
+    const botSafe = vh < 620 ? 196 : (vh < 820 ? 232 : 268);
+    const availW = vw - padX * 2;
+    const availH = Math.max(200, vh - topSafe - botSafe);
+    const w = lerp(a.w, b.w, t), h = lerp(a.h, b.h, t);
+    const s = Math.min(availW / w, availH / h);
+
+    const V = {
+      "--cs": s,
+      "--cx": (-lerp(a.x, b.x, t)) + "px",
+      "--cy": (-lerp(a.y, b.y, t)) + "px",
+      "--wtop": (topSafe + availH / 2) + "px",
+      "--accent": this.props.accent ?? "#35D07A",
+      "--sys": S(0.145, 0.182),
+      "--t1": 1 - S(0.004, 0.042),
+      "--leak": band(0.052, 0.082, 0.112, 0.146),
+      "--res": band(0.856, 0.878, 0.896, 0.910),
+      "--loop": band(0.886, 0.902, 0.914, 0.926),
+      "--back": S(0.916, 0.932),
+      "--dark": S(0.922, 0.938),
+      "--curs": 1 - S(0.004, 0.026),
+      "--hp": p < 0.022 ? "running" : "paused",
+      "--ink": p > 0.928 ? "#0C0F0D" : "#F2F1EA",
+      "--muted": p > 0.928 ? "rgba(12,15,13,.55)" : "#979D95",
+      "--track": p > 0.928 ? "rgba(12,15,13,.18)" : "rgba(242,241,234,.2)",
+      "--pill": p > 0.928 ? "rgba(12,15,13,.05)" : "rgba(242,241,234,.07)",
+      "--founder": band(0.940, 0.952, 0.962, 0.971),
+      "--cta": S(0.973, 0.987),
+      "--ctaPE": p > 0.979 ? "auto" : "none",
+      "--chrome": this.props.showProgress === false ? 0 : 1
+    };
+    for (let n = 1; n <= 6; n++) V["--lk" + n] = S(0.054 + n * 0.007, 0.074 + n * 0.007);
+
+    const captions = [
+      [2, 0.050, 0.074, 0.108, 0.132],
+      [3, 0.140, 0.164, 0.184, 0.204],
+      [11, 0.864, 0.880, 0.906, 0.920],
+      [12, 0.892, 0.906, 0.914, 0.926]
+    ];
+    this.SV.forEach((sv) => {
+      const sp = sv.b - sv.a;
+      captions.push([sv.i + 3, sv.a + 0.005 * sp, sv.a + 0.075 * sp, sv.b - 0.075 * sp, sv.b - 0.005 * sp]);
+    });
+    captions.forEach((c) => { V["--t" + c[0]] = band(c[1], c[2], c[3], c[4]); });
+
+    let fixed = 0;
+    this.SV.forEach((sv) => {
+      const span = sv.b - sv.a;
+      const ph = (x, y) => S(sv.a + span * x, sv.a + span * y);
+      const roomIn = ph(0.03, 0.13);
+      const roomOut = 1 - ph(0.93, 1.0);
+      V["--room" + sv.k.charAt(0).toUpperCase() + sv.k.charAt(1)] = Math.min(roomIn, roomOut);
+      V["--" + sv.k + "Ann"] = ph(0.18, 0.27);
+      V["--" + sv.k + "Prob"] = Math.min(ph(0.20, 0.28), 1 - ph(0.54, 0.62));
+      V["--" + sv.k + "Fix"] = ph(0.56, 0.80);
+      V["--" + sv.k + "Out"] = ph(0.82, 0.89);
+      V["--" + sv.k + "Panel"] = ph(0.76, 0.86);
+      V["--" + sv.k + "Cms"] = ph(0.24, 0.34);
+      for (let n = 1; n <= 8; n++) V["--" + sv.k + n] = ph(0.55 + (n - 1) * 0.028, 0.63 + (n - 1) * 0.028);
+      if (sv.k === "cr") {
+        for (let n = 1; n <= 5; n++) V["--cr" + n] = ph(0.50 + (n - 1) * 0.026, 0.58 + (n - 1) * 0.026);
+        V["--crCms"] = ph(0.66, 0.72);
+        V["--crM1"] = ph(0.70, 0.755);
+        V["--crM2"] = ph(0.755, 0.805);
+        V["--crM3"] = ph(0.805, 0.86);
+        V["--crOut"] = ph(0.865, 0.915);
+      }
+      V["--h" + sv.i] = Math.min(ph(-0.05, 0.04), 1 - ph(0.94, 1.02));
+      V["--n" + sv.i] = S(sv.b - 0.026, sv.b + 0.002);
+      if (sv.i < 7) V["--g" + sv.i] = S(sv.b - 0.010, sv.b + 0.024);
+      if (p >= sv.b - 0.026) fixed++;
+    });
+    let maxRoom = 0;
+    this.SV.forEach((sv) => {
+      const key = "--room" + sv.k.charAt(0).toUpperCase() + sv.k.charAt(1);
+      if (sv.k !== "wb" || p > 0.19) maxRoom = Math.max(maxRoom, V[key]);
+    });
+    V["--sys"] = V["--sys"] * (1 - 0.88 * maxRoom);
+
+    let maxH = 0;
+    this.SV.forEach((sv) => { maxH = Math.max(maxH, V["--h" + sv.i]); });
+    this.SV.forEach((sv) => { V["--dim" + sv.i] = 1 - 0.62 * Math.max(0, maxH - V["--h" + sv.i]); });
+
+    let tintV = 0, tintC = "#6BA5FF";
+    this.SV.forEach((sv) => {
+      const key = "--room" + sv.k.charAt(0).toUpperCase() + sv.k.charAt(1);
+      const v = Math.max(V[key], V["--h" + sv.i] * 0.55);
+      if (v > tintV) { tintV = v; tintC = sv.c; }
+    });
+    V["--tint"] = 0.30 * tintV;
+    V["--tintC"] = tintC;
+    V["--cpBus"] = V["--cp4"];
+    V["--trLine"] = V["--tr6"];
+    V["--roomWb"] = Math.max(V["--roomWb"], Math.min(0.42 + 0.58 * S(0.02, 0.07), 1 - S(0.132, 0.172)));
+
+    let idx = 0;
+    for (let n = 0; n < this.stops.length; n++) if (p >= this.stops[n] - 0.0001) idx = n;
+    for (let n = 0; n < 13; n++) V["--d" + (n + 1)] = n === idx ? 1 : 0;
+    if (idx !== this.lastIdx && this.label) { this.label.textContent = this.labels[idx]; this.lastIdx = idx; }
+    if (fixed !== this.lastFixed && this.health) {
+      this.health.textContent = fixed >= 7 ? "SYSTEM HEALTH — 7 / 7 CONNECTED" : ("SYSTEM HEALTH — " + fixed + " / 7 FIXED");
+      this.lastFixed = fixed;
+    }
+
+    for (const key in V) st.style.setProperty(key, V[key]);
+  }
+
+  renderVals() {
+    return {
+      refRoot: this.refRoot,
+      refStage: this.refStage,
+      refLabel: this.refLabel,
+      refHealth: this.refHealth,
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
