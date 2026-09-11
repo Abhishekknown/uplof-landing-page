@@ -7,8 +7,11 @@ const names = [
   'index.html', 'support.js', 'image-slot.js',
   'uploads/pasted-1788731450464-0.png',
   'website-design/index.html', 'website-design/style.css', 'website-design/enquiry.js',
+  'website-design/taste.css', 'website-design/assets/website-concept.webp',
+  'website-design/assets/design-workspace.webp', 'website-design/assets/geist-latin.woff2',
+  'website-design/assets/geist-mono-latin.woff2',
 ];
-const mime = { '.html': 'text/html', '.js': 'application/javascript', '.css': 'text/css', '.png': 'image/png' };
+const mime = { '.html': 'text/html', '.js': 'application/javascript', '.css': 'text/css', '.png': 'image/png', '.webp': 'image/webp', '.woff2': 'font/woff2' };
 const files = names.map(name => {
   const data = fs.readFileSync(path.join(root, name));
   return { name, data, hash: hash(data.toString('base64') + path.extname(name).slice(1)).toString('hex').slice(0, 32), type: mime[path.extname(name)] };
