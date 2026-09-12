@@ -4,8 +4,8 @@ const path = require('node:path');
 const { hash } = require(process.env.UPLOF_BLAKE3_MODULE || 'blake3-wasm');
 const root = path.resolve(__dirname, '..');
 const names = [
-  'index.html', 'support.js', 'image-slot.js',
-  'uploads/pasted-1788731450464-0.png',
+  'index.html', 'style.css', 'homepage.js',
+  'assets/geist-latin.woff2', 'assets/geist-mono-latin.woff2',
   'website-design/index.html', 'website-design/style.css', 'website-design/enquiry.js',
   'website-design/taste.css', 'website-design/assets/website-concept.webp',
   'website-design/assets/design-workspace.webp', 'website-design/assets/geist-latin.woff2',
