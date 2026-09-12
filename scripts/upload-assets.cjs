@@ -4,8 +4,15 @@ const path = require('node:path');
 const { hash } = require(process.env.UPLOF_BLAKE3_MODULE || 'blake3-wasm');
 const root = path.resolve(__dirname, '..');
 const names = [
-  'index.html', 'style.css', 'homepage.js',
+  'index.html', 'support.js', 'style.css', 'homepage.js',
   'assets/geist-latin.woff2', 'assets/geist-mono-latin.woff2',
+  'assets/founder-desk.png', 'assets/ill-banner.png', 'assets/ill-form.png',
+  'assets/ill-found.png', 'assets/ill-gap.png', 'assets/ill-next.png',
+  'assets/ill-portrait.png', 'assets/ill-reason.png',
+  'assets/step-1.png', 'assets/step-2.png', 'assets/step-3.png', 'assets/step-4.png',
+  'assets/svc-01.png', 'assets/svc-02.png', 'assets/svc-03.png',
+  'assets/svc-04.png', 'assets/svc-05.png', 'assets/svc-06.png',
+  'assets/svc-07.png', 'assets/svc-08.png', 'assets/svc-09.png',
   'website-design/index.html', 'website-design/style.css', 'website-design/enquiry.js',
   'website-design/taste.css', 'website-design/assets/website-concept.webp',
   'website-design/assets/design-workspace.webp', 'website-design/assets/geist-latin.woff2',
