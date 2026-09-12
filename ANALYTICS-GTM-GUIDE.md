@@ -54,6 +54,16 @@ Connect Google Search Console to GA4. Search Console can show which queries gene
 
 The practical view is: **query → landing page → engagement → lead event**, compared in aggregate.
 
+## Campaign context on enquiries
+
+The site preserves non-personal campaign context for each enquiry:
+
+- First touch: the first campaign values seen on the visitor's journey.
+- Last touch: the most recent campaign values before the enquiry.
+- Captured values: `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_term`, `gclid`, and `landing_page`.
+
+These values are stored in the browser and added as hidden form fields. The owner notification includes them under “Campaign context (non-personal)” so campaigns can be compared with leads. Names, email addresses, phone numbers, and message text are never sent to GA4 or Tag Manager.
+
 ### What we can add next
 
 - Preserve UTM, `gclid` and landing-page values in the enquiry flow as non-personal campaign metadata.
@@ -66,4 +76,3 @@ Do not send names, email addresses, phone numbers or message text to Analytics o
 ## Plain-English summary
 
 **Visits tell us who arrived. Scrolls tell us who engaged. `generate_lead` tells us who raised their hand. UTMs, Google Ads and Search Console tell us which campaign or search topic brought them in.**
-

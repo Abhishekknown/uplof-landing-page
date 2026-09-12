@@ -3,6 +3,31 @@
   const measurementId = 'G-36B8PX5BFP';
   const tagManagerId = 'GTM-KPHGB4RK';
 
+  // Keep campaign context only; never store names, emails or message text here.
+  const captureAttribution = () => {
+    const params = new URLSearchParams(window.location.search);
+    const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid'];
+    const current = {};
+    keys.forEach((key) => { if (params.get(key)) current[key] = params.get(key); });
+    current.landing_page = `${window.location.pathname}${window.location.search}`;
+    const last = JSON.parse(localStorage.getItem('uplof-attribution-last') || '{}');
+    const first = JSON.parse(localStorage.getItem('uplof-attribution-first') || '{}');
+    const mergedLast = { ...last, ...current };
+    const mergedFirst = Object.keys(first).length ? first : mergedLast;
+    localStorage.setItem('uplof-attribution-last', JSON.stringify(mergedLast));
+    localStorage.setItem('uplof-attribution-first', JSON.stringify(mergedFirst));
+    document.querySelectorAll('form').forEach((form) => {
+      const fields = { ...mergedFirst, ...mergedLast };
+      Object.entries(fields).forEach(([key, value]) => {
+        if (!value) return;
+        let input = form.querySelector(`input[name="${key}"]`);
+        if (!input) { input = document.createElement('input'); input.type = 'hidden'; input.name = key; form.append(input); }
+        input.value = value;
+      });
+    });
+  };
+  captureAttribution();
+
   const loadAnalytics = () => {
     if (window.__uplofAnalyticsLoaded || !measurementId) return;
     window.__uplofAnalyticsLoaded = true;
