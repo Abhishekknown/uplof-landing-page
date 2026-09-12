@@ -1,6 +1,7 @@
 (() => {
   const key = 'uplof-cookie-choice';
   const measurementId = 'G-36B8PX5BFP';
+  const tagManagerId = 'GTM-MR3F73PQ';
 
   const loadAnalytics = () => {
     if (window.__uplofAnalyticsLoaded || !measurementId) return;
@@ -19,6 +20,20 @@
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
     document.head.append(script);
+
+    if (tagManagerId && !window.__uplofTagManagerLoaded) {
+      window.__uplofTagManagerLoaded = true;
+      window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
+      const gtm = document.createElement('script');
+      gtm.async = true;
+      gtm.src = `https://www.googletagmanager.com/gtm.js?id=${tagManagerId}`;
+      document.head.append(gtm);
+    }
+
+    document.addEventListener('submit', () => {
+      window.dataLayer.push({ event: 'generate_lead', lead_source: 'website_form' });
+      window.gtag('event', 'generate_lead', { method: 'website_form' });
+    }, { capture: true, once: true });
   };
 
   const choice = localStorage.getItem(key);
