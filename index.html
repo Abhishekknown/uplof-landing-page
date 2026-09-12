@@ -498,13 +498,7 @@
         </div>
       </div>
 
-      <form action="https://formsubmit.co/hello@uplof.me" method="POST" style="background:#121713;border:1px solid #2a332d;border-radius:10px;padding:28px">
-        <input type="hidden" name="_subject" value="New Uplof lead audit enquiry">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_cc" value="{{ email }}">
-        <input type="hidden" name="_autoresponse" value="Thanks for contacting Uplof. I received your lead audit request and will reply shortly.">
-        <input type="hidden" name="_next" value="https://uplof.me/?submitted=1#contact">
+      <form action="/api/lead" method="POST" style="background:#121713;border:1px solid #2a332d;border-radius:10px;padding:28px">
         <div style="font-family:'Geist Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#a5ada6">Draft your message</div>
         <div style="margin-top:20px;display:grid;gap:14px">
           <label style="display:grid;gap:6px;font-size:13px;color:#a5ada6">Your name
@@ -527,7 +521,7 @@
           </label>
           <button type="submit" style="background:#35d07a;color:#07120b;border:0;font-family:Geist,system-ui,sans-serif;font-size:15px;font-weight:600;padding:13px 18px;border-radius:6px;cursor:pointer" style-hover="filter:brightness(1.08)" style-active="filter:brightness(.88)">Send enquiry by email ↗</button>
           <a href="{{ formLink }}" target="_blank" rel="noopener" style="border:1px solid #2a332d;color:#f2f1ea;font-size:15px;font-weight:500;padding:13px 18px;border-radius:6px;text-align:center" style-hover="border-color:#35d07a">Continue on WhatsApp</a>
-          <p style="font-size:13px;color:#a5ada6">Your message goes to hello@uplof.me. WhatsApp remains available if you prefer to start there.</p>
+          <p style="font-size:13px;color:#a5ada6">Your enquiry is handled by Uplof. WhatsApp remains available if you prefer to start there.</p>
         </div>
       </form>
     </div>
@@ -538,6 +532,7 @@
     <div class="nav-shell" style="padding:40px 0 !important;display:flex;flex-wrap:wrap;gap:16px;align-items:baseline;justify-content:space-between">
       <p style="font-size:14px;color:#5c6157">Uplof. Websites, search and follow-up, connected.</p>
       <p style="font-family:'Geist Mono',ui-monospace,monospace;font-size:13px;color:#5c6157">+91 88284 47664</p>
+      <nav aria-label="Legal" style="display:flex;gap:14px;flex-wrap:wrap;font-size:13px"><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="/refund-cancellation-policy/">Refunds</a><a href="/cookie-tracking-notice/">Cookies</a></nav>
     </div>
   </footer>
 
