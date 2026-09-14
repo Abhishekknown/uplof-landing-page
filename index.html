@@ -226,7 +226,7 @@
         </div>
       </div>
       <p style="margin-top:22px;color:#5c6157">Each piece has a job. The connections make them useful together.</p>
-      <div class="cta-bar"><div><strong>Find where your enquiries are getting lost.</strong><p style="color:#a5ada6;font-size:14px;margin-top:4px">Talk directly with Abhishek about your lead journey.</p></div><a class="call-button" href="tel:+918828447664">Call me now ↗</a></div>
+      <div class="cta-bar"><div><strong>Find where your enquiries are getting lost.</strong><p style="color:#a5ada6;font-size:14px;margin-top:4px">Talk directly with Abhishek about your lead journey.</p></div><a class="call-button" href="tel:+917710894943">Call me now ↗</a></div>
     </div>
   </section>
 
@@ -528,10 +528,10 @@
   </section>
 
   <footer style="background:#faf8f3;border-top:1px solid #ddd8cc">
-    <div class="nav-shell"><div class="cta-bar" style="margin:20px 0"><div><strong>Ready to talk through your website?</strong><p style="color:#a5ada6;font-size:14px;margin-top:4px">Call Abhishek on +91 88284 47664.</p></div><a class="call-button" href="tel:+918828447664">Call me now ↗</a></div></div>
+    <div class="nav-shell"><div class="cta-bar" style="margin:20px 0"><div><strong>Ready to talk through your website?</strong><p style="color:#a5ada6;font-size:14px;margin-top:4px">Call Abhishek on +91 77108 94943.</p></div><a class="call-button" href="tel:+917710894943">Call me now ↗</a></div></div>
     <div class="nav-shell" style="padding:40px 0 !important;display:flex;flex-wrap:wrap;gap:16px;align-items:baseline;justify-content:space-between">
       <p style="font-size:14px;color:#5c6157">Uplof. Websites, search and follow-up, connected.</p>
-      <p style="font-family:'Geist Mono',ui-monospace,monospace;font-size:13px;color:#5c6157">+91 88284 47664</p>
+      <p style="font-family:'Geist Mono',ui-monospace,monospace;font-size:13px;color:#5c6157">+91 77108 94943</p>
       <nav aria-label="Legal" style="display:flex;gap:14px;flex-wrap:wrap;font-size:13px"><a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a><a href="/refund-cancellation-policy/">Refunds</a><a href="/cookie-tracking-notice/">Cookies</a></nav>
     </div>
   </footer>
@@ -540,12 +540,13 @@
 
 </x-dc>
 <script src="/cookie-consent.js" defer></script>
-<script type="text/x-dc" data-dc-script data-props="{&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;918828447664&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+<script src="/whatsapp-lead.js" defer></script>
+<script type="text/x-dc" data-dc-script data-props="{&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;917710894943&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
 class Component extends DCLogic {
   state = { name: "", business: "", email: "", site: "", phone: "", note: "" };
 
   wa(text) {
-    const num = (this.props.whatsappNumber ?? "918828447664").replace(/\D/g, "");
+    const num = (this.props.whatsappNumber ?? "917710894943").replace(/\D/g, "");
     return "https://wa.me/" + num + "?text=" + encodeURIComponent(text);
   }
 

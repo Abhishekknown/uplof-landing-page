@@ -2,7 +2,7 @@
 
 - `/` is the original animated homepage export.
 - `/website-design/` is the static service landing page. Its content, styles and WhatsApp brief helper live in `website-design/`.
-- Enquiries open WhatsApp for **+91 8828447664** with a prepared brief. The visitor must press Send in WhatsApp. This site does not store form submissions.
+- Enquiries open WhatsApp for **+91 7710894943** with a prepared brief. The visitor must press Send in WhatsApp. This site does not store form submissions.
 - The Northline website shown on the service page is an illustrative concept, not a client case study.
 
 ## Preview

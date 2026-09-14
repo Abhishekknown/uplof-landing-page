@@ -12,6 +12,6 @@ form.addEventListener('submit', (event) => {
     `Details: ${data.get('details').trim() || 'Let’s discuss.'}`, '',
     'Please get in touch to discuss the scope and quote.',
   ].join('\n');
-  window.location.href = `https://wa.me/918828447664?text=${encodeURIComponent(body)}`;
+  window.location.href = `https://wa.me/917710894943?text=${encodeURIComponent(body)}`;
   document.querySelector('#form-status').textContent = 'Continue in WhatsApp to review and send your brief. If WhatsApp did not open, use the direct chat link below.';
 });
